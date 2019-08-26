@@ -6,8 +6,8 @@ class ProjectsController < ApplicationController
   private
 
   def set_version
+  end
 
   def project_params
-    params(:project).
   end
 end
