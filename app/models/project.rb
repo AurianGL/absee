@@ -3,6 +3,8 @@ class Project < ApplicationRecord
   belongs_to :artist, foreign_key: :artist_id, class_name: 'User'
   has_many :versions
 
+  # TO DO: Créer une methode de classe pour retourner la dernière version du projet
+
   validates :name, presence: true
   validates :brief, presence: true
 
