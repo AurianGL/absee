@@ -3,10 +3,14 @@ class ProjectsController < ApplicationController
 
   def show
     #before action
-    @version = @project.versions.build
+    authorize @project
+
     @comment = Comment.new
+    @color_swatch = ColorSwatch.new
     @last_version = @project.versions.last
-    @comments = @last_version.comments
+    @comments = @last_version.comments if @last_version
+
+    @version = @project.versions.build
   end
 
   def new
