@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :projects do
     resources :versions, only: [:create]
   end
+
+  resources :versions, only: [:index] do
+    resources :color_swatches, only: [:create]
+  end
 end
