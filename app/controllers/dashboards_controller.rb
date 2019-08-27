@@ -1,9 +1,6 @@
 class DashboardsController < ApplicationController
   def show
-    all_projects
-  end
-
-  def all_projects
-    @projects = current_user.projects
+    @customer_projects = Project.as_customer(current_user.id)
+    @artist_projects = Project.as_artist(current_user.id)
   end
 end
