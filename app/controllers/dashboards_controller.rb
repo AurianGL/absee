@@ -1,13 +1,12 @@
 class DashboardsController < ApplicationController
   def show
-    all_projects
+    @customer_projects = Project.as_customer(current_user.id)
+    @artist_projects = Project.as_artist(current_user.id)
   end
 
   def create
     @project = current_user.projects.create!(project_params)
-
     if @project.save
-
     else
       render 'new'
     end
@@ -15,10 +14,6 @@ class DashboardsController < ApplicationController
 
   def new
     @project = Project.new
-  end
-
-  def all_projects
-    @projects = current_user.projects
   end
 
   private
