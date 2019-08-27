@@ -3,8 +3,8 @@
     <div class="container d-flex justify-content-start align-items-stretch m-0 col-12 flex-column">
 
       <div class="ml-3">
-        <%= link_to "Create project", new_project_path, class: "btn btn-flat" %>
         <% if !@artist_projects.any? && @customer_projects.any? %>
+        <%= link_to "Create project", new_project_path, class: "btn btn-flat" %>
         <% @customer_projects.each do |project| %>
         <div class="card-product mt-3">
           <%#= image_tag "#" %>
@@ -16,6 +16,7 @@
           <% end %>
         </div>
         <% elsif @artist_projects.any? && !@customer_projects.any? %>
+        <%= link_to "Create project", new_project_path, class: "btn btn-flat" %>
         <% @artist_projects.each do |project| %>
           <div class="card-product mt-3">
             <%#= image_tag "#" %>
