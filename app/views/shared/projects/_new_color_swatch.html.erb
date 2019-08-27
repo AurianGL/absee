@@ -1,0 +1,11 @@
+
+<% if @last_version %>
+  <%= simple_form_for [@last_version, @color_swatch] do |f| %>
+    <%= f.input :color_1 %>
+    <%= f.input :color_2 %>
+    <%= f.input :color_3 %>
+    <%= f.input :color_4 %>
+    <%= f.input :color_5 %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
