@@ -1,6 +1,7 @@
 puts "destroying DB"
 
 Comment.destroy_all
+Version.destroy_all
 Project.destroy_all
 User.destroy_all
 
@@ -50,17 +51,16 @@ Version.create!(
 puts "version created"
 
 
-puts "creating some commentaires langues de putes"
+puts "creating some commentaires"
 
-Comment.create!(
+comment = Comment.new(
     user: User.last,
     version: Version.last,
     description: "bof",
-    #image_url: "https://imgur.com/gallery/2cQabj3"
-    #validation: true
-
-
-  )
+    validation: true)
+url = "https://images-na.ssl-images-amazon.com/images/I/71lBoP-NNGL._SX425_.jpg"
+comment.remote_image_url = url
+comment.save
 
 
 puts "C'est fait!"
