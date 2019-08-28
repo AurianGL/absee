@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     @color_swatch = ColorSwatch.new
     @last_version = @project.versions.last
     @comments = @last_version.comments if @last_version
-
+    @last_color_swatch = @last_version.color_swatch if @last_version
     @version = @project.versions.build
   end
 
