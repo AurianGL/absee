@@ -5,11 +5,9 @@ class ColorSwatchesController < ApplicationController
     @project = @version.project
     @color_swatch.version = @version
     @color_swatch.artist_as = @project.artist
-
     authorize @color_swatch
 
-
-    if @color_swatch.save
+    if @color_swatch.save!
       redirect_to project_path(@project)
     else
       redirect_to project_path(@project)
