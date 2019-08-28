@@ -1,8 +1,5 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-  // opacity: 0;
-
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,4 +8,51 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar a:hover {
+  color: $grey-blue;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    list-style: none;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+.dropdown-item {
+    font-size: 0.75rem;
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: black;
+    text-align: inherit;
+    white-space: nowrap;
+    border: 0;
+}
+
+.dropdown-item:hover {
+  color: $grey-blue;
+  background-color: white;
 }
