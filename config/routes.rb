@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sandbox/show'
   get 'dashboards/show'
   devise_for :users
   root to: 'pages#home'
@@ -15,4 +16,6 @@ Rails.application.routes.draw do
     resources :color_swatches, only: [:create]
     resources :comments, only: [:create]
   end
+
+  get '/sandbox', to: 'sandbox#show'
 end

@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   private
 
   def skip_pundit?
-    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^dashboards$)/
+    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^dashboards$)|(^sandbox$)/
   end
 end
