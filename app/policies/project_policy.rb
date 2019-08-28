@@ -3,6 +3,10 @@ class ProjectPolicy < ApplicationPolicy
     return true
   end
 
+  def new?
+    true
+  end
+
   def update?
     record.customer == user || record.artist == user
     # - record: the project passed to the `authorize` method in controller

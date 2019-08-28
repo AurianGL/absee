@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :update]
 
   def show
-    #before action
     authorize @project
 
     @comment = Comment.new
@@ -15,14 +14,21 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    authorize @project
   end
 
   def create
-    @project = Project.new
+    @project = Project.new(project_params)
+    authorize @project
+    @project.customer = current_user
     if @project.save
+      version_name = @project.name.gsub(' ', '_') + "_V0"
+      @version = Version.new(name: version_name)
+      @version.project = @project
+      @version.save
       redirect_to @project
     else
-      render 'dashboard_path'
+      render :new
     end
   end
 
