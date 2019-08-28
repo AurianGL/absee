@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_101842) do
+ActiveRecord::Schema.define(version: 2019_08_28_140121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_101842) do
     t.boolean "validation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "x"
+    t.string "y"
     t.index ["artist_as_id"], name: "index_color_swatches_on_artist_as_id"
     t.index ["version_id"], name: "index_color_swatches_on_version_id"
   end
@@ -38,6 +40,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_101842) do
     t.boolean "validation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "x"
+    t.string "y"
     t.index ["user_id"], name: "index_comments_on_user_id"
     t.index ["version_id"], name: "index_comments_on_version_id"
   end
@@ -49,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_101842) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "x"
+    t.string "y"
     t.index ["artist_id"], name: "index_projects_on_artist_id"
     t.index ["customer_id"], name: "index_projects_on_customer_id"
   end

@@ -1,7 +1,13 @@
 <h1>Projects#show</h1>
 <p>Find me in app/views/projects/show.html.erb</p>
+<div moodboard>
+  <% render 'shared/projects/work_in_progress' %>
+  <%= render 'shared/projects/color_swatch_display' %>
+</div>
 <%= render 'shared/projects/form_new_version' %>
-<%= render 'shared/projects/new_color_swatch' %>
+<% if @last_color_swatch == false %>
+  <%= render 'shared/projects/new_color_swatch' %>
+<% end %>
 <%= render 'shared/projects/new_comment' %>
 
 
