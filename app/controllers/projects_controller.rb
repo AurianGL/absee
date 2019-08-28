@@ -10,8 +10,8 @@ class ProjectsController < ApplicationController
     @color_swatch = ColorSwatch.new
     @last_version = @project.versions.last
     @comments = @last_version.comments
-    @last_color_swatch = @last_version.color_swatch
-    @work_in_progress = @last_version.work_in_progress
+    @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
+    @work_in_progress = @last_version.work_in_progress if @last_version.work_in_progress
     @version = @project.versions.build
   end
 
@@ -26,7 +26,6 @@ class ProjectsController < ApplicationController
     @project.customer = current_user
     # @project.artist = current_user
     if @project.save
-      raise
       version_name = @project.name.gsub(' ', '_') + "_V0"
       @version = Version.new(name: version_name)
       @version.project = @project
