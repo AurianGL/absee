@@ -8,8 +8,10 @@ class CommentsController < ApplicationController
 
     authorize @comment
     if @comment.save
+      flash[:notice] = 'your comment has been added'
       redirect_to project_path(@project)
     else
+      flash[:notice] = 'error'
       redirect_to project_path(@project)
     end
   end
