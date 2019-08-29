@@ -26,12 +26,26 @@
 }
 
 .btn-circle:hover {
-  width: 36px;
-  height: 36px;
-  font-size: 15px;
+  color: $blue;
+  background: $very-light-grey;
+}
+
+.btn-circle-save {
   color: $grey-blue;
   background: $very-light-grey;
-  border-radius: 18px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  border: $gray;
+}
+
+.btn-circle-save:hover {
+  color: $green;
+  background: $very-light-grey;
 }
 
 .btn-circle-plus {

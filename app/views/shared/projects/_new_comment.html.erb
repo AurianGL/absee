@@ -1,7 +1,0 @@
-<% if @last_version %>
-  <%= simple_form_for [@last_version, @comment] do |f| %>
-    <%= f.input :description %>
-    <%= f.text_field :image %>
-    <%= f.submit %>
-  <% end %>
-<% end %>

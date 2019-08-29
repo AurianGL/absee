@@ -18,10 +18,11 @@
           <%= f.input :name  %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
-          <div class="modal-footer">
-            <%= f.submit %>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+            <div class="modal-footer">
+              <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle-save") do %>
+              <i class="fas fa-check"></i>
+              <% end %>
+            </div>
         <% end %>
       </div>
     </div>
