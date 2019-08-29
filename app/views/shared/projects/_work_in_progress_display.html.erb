@@ -2,3 +2,7 @@
 <% if @project.versions.last.work_in_progress %>
     <%= cl_image_tag(@project.versions.first.work_in_progress_url, size: "400x400", alt: "work in progress", class:"draggable work_in_progress") %>
 <% end %>
+
+<button type="button" class="btn btn-primary btn-circle-plus" data-toggle="modal" data-target="#colorSwatch">
+<i class="fas fa-plus"></i>
+</button>

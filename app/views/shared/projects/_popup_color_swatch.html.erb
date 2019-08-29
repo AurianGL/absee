@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colorSwatch">
-  Color Swatch
+<button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#colorSwatch">
+<i class="fas fa-fill-drip"></i>
 </button>
 
 <!-- Modal -->
@@ -21,8 +21,8 @@
            <%= f.color_field :color_3 %>
            <%= f.color_field :color_4 %>
            <%= f.color_field :color_5 %>
-           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-           <i class="icon-ok icon-white"></i> Save
+           <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle") do %>
+           <i class="fas fa-check"></i>
            <% end %>
          <% end %>
         <% end %>

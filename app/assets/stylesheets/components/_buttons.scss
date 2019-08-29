@@ -11,3 +11,47 @@
   background: black;
   color: white;
 }
+
+.btn-circle {
+  color: $grey-blue;
+  background: $very-light-grey;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  border: $gray;
+}
+
+.btn-circle:hover {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  color: $grey-blue;
+  background: $very-light-grey;
+  border-radius: 18px;
+}
+
+.btn-circle-plus {
+  color: $grey-blue;
+  background: $very-light-grey;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 30px;
+  line-height: 1.428571429;
+  border-radius: 30px;
+  border: $gray;
+}
+
+.btn-circle-plus:hover {
+  width: 66px;
+  height: 66px;
+  font-size: 33px;
+  color: $grey-blue;
+  background: $very-light-grey;
+  border-radius: 33px;
+}
