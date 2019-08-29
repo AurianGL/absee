@@ -43,7 +43,7 @@ Profile.create!(
 puts "2 fake profiles created ⭐️"
 
 
-puts "creating one awesome project"
+puts "creating two awesome projects"
 
 Project.create!(
 
@@ -51,6 +51,14 @@ Project.create!(
     customer_id: User.last.id,
     artist_id: User.first.id,
     brief: "make a cool logo for ABsee"
+  )
+
+Project.create!(
+
+    name: "8=o",
+    customer_id: User.last.id,
+    artist_id: User.first.id,
+    brief: "Make Le Wagon Kawai Again"
   )
 
 puts "it's gonna be alright"

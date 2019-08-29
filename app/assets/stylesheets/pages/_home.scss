@@ -1,9 +1,6 @@
 body, h2 {
-  background: url('https://i.imgur.com/P6DAYV6.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url('background.png');
+  background-repeat:repeat;
   text-align: center;
   text-transform: uppercase;
   font-family: sans-serif;
