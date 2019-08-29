@@ -2,16 +2,13 @@
 <p>Find me in app/views/projects/show.html.erb</p>
 <div moodboard>
   <%= render 'shared/projects/work_in_progress_display', project: @project %>
-  <%= render 'shared/projects/color_swatch_display' %>
-  <%= render 'shared/projects/comments_display' %>
-
+  <%= render 'shared/projects/color_swatch_display', project: @project %>
+  <%= render 'shared/projects/comments_display', project: @project %>
 </div>
-<%= render 'shared/projects/form_new_version' %>
-<% if !@last_color_swatch %>
-  <%= render 'shared/projects/popup_color_swatch' %>
-<% end %>
-<%= render 'shared/projects/popup_new_comment' %>
-<%= render 'shared/projects/popup_color_swatch' %>
-<%= render 'shared/projects/popup_work_in_progress_display' %>
+
+
+<%= render 'shared/projects/popup_new_comment', project: @project  %>
+<%= render 'shared/projects/popup_color_swatch', project: @project  %>
+<%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
 
 

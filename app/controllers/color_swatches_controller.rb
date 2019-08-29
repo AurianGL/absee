@@ -8,7 +8,7 @@ class ColorSwatchesController < ApplicationController
     authorize @color_swatch
 
     if @color_swatch.save!
-      flash[:notice] = 'your comment has been added'
+      flash[:notice] = 'your color swatch has been added'
       redirect_to project_path(@project)
     else
       flash[:notice] = 'error'
