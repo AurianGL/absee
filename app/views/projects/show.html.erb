@@ -1,8 +1,9 @@
 <h1>Projects#show</h1>
 <p>Find me in app/views/projects/show.html.erb</p>
 <div moodboard>
-  <%= render 'shared/projects/work_in_progress_display' %>
+  <%= render 'shared/projects/work_in_progress_display', project: @project %>
   <%= render 'shared/projects/color_swatch_display' %>
+  <%= render 'shared/projects/comments_display' %>
 </div>
 <%= render 'shared/projects/form_new_version' %>
 <% if !@last_color_swatch %>

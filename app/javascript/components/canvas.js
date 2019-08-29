@@ -10,7 +10,7 @@ const start = (event) => {
   currentDrawable = event.currentTarget;
   initY = event.offsetY;
   initX = event.offsetX;
-  context = currentDrawable.getContext('2d')
+  context = currentDrawable.getContext('2d');
   currentDrawable.addEventListener("mousemove", draw);
 }
 
