@@ -1,6 +1,6 @@
-<% @comments.each do |comment| %>
+<% @project.versions.last.comments.each do |comment| %>
   <div class="draggable comment">
     <%= cl_image_tag(comment.image_url, size: "200x200", alt: "erreur", draggable: false) %>
-    <% comment.description %>
+    <%= comment.description %>
   </div>
 <% end %>

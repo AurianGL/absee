@@ -1,6 +1,6 @@
 
-<% if @last_version %>
-  <%= simple_form_for [@last_version, @color_swatch] do |f| %>
+<% if @project.versions.last.color_swatch.present? %>
+  <%= simple_form_for [@projects] do |f| %>
     <%= f.color_field :color_1 %>
     <%= f.color_field :color_2 %>
     <%= f.color_field :color_3 %>

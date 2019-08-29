@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2019_08_29_122952) do
     t.index ["version_id"], name: "index_comments_on_version_id"
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.string "username"
+    t.boolean "customer"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.bigint "customer_id"
     t.bigint "artist_id"
@@ -84,6 +93,7 @@ ActiveRecord::Schema.define(version: 2019_08_29_122952) do
   add_foreign_key "color_swatches", "versions"
   add_foreign_key "comments", "users"
   add_foreign_key "comments", "versions"
+  add_foreign_key "profiles", "users"
   add_foreign_key "projects", "users", column: "artist_id"
   add_foreign_key "projects", "users", column: "customer_id"
   add_foreign_key "versions", "projects"

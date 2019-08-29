@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     authorize @project
+    @last_version = @project.versions.last
 
     @comment = Comment.new
     @color_swatch = ColorSwatch.new

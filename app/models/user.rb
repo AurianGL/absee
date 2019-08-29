@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :projects
   has_many :color_swatches
   has_many :comments
+  has_one :profile
 end

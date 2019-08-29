@@ -5,11 +5,12 @@ class CommentsController < ApplicationController
     @project = @version.project
     @comment.version = @version
     @comment.user = current_user
-
     authorize @comment
     if @comment.save
+      flash[:notice] = 'your comment has been added'
       redirect_to project_path(@project)
     else
+      flash[:notice] = 'error'
       redirect_to project_path(@project)
     end
   end
@@ -21,7 +22,6 @@ class CommentsController < ApplicationController
 
   def update
   end
-
 
   def comment_params
     params.require(:comment).permit(:description, :image)
