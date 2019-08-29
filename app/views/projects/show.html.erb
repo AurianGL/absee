@@ -1,7 +1,7 @@
 <h1>Projects#show</h1>
 <p>Find me in app/views/projects/show.html.erb</p>
 <div moodboard>
-  <%= render 'shared/projects/work_in_progress_display', project: @project %>
+  <%= render 'shared/projects/work_in_progress_display', last_version: @last_version %>
   <%= render 'shared/projects/color_swatch_display' %>
   <%= render 'shared/projects/comments_display' %>
 </div>

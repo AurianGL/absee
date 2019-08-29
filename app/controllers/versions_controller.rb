@@ -17,6 +17,6 @@ class VersionsController < ApplicationController
   end
 
   def version_params
-    params.require(:version).permit(:photo)
+    params.require(:version).permit(:photo, :name, :x, :y)
   end
 end
