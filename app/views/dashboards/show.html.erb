@@ -27,6 +27,7 @@
                 <p><%= project.name %></p>
                 <p><%= project.brief %></p>
                 <p><%= project.id %></p>
+                <%= link_to "View Project", project_path(project), class: "btn btn-flat" %>
               </div>
             </div>
           <% end %>
