@@ -22,9 +22,25 @@ User.create!(
       password: "password",
     )
 
-
-
 puts "2 fake users created ⭐️"
+
+
+
+puts "Creating 2 fake profiles..."
+
+Profile.create!(
+  username: "aurian GL",
+  customer: false,
+  user_id: User.first.id,
+  )
+
+Profile.create!(
+  username: "alice dvx",
+  customer: User.last.id,
+  user_id: User.first.id,
+  )
+
+puts "2 fake profiles created ⭐️"
 
 
 puts "creating one awesome project"

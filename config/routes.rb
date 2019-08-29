@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
+  resources :profiles, only: [:new, :create, :show]
+
   get '/sandbox', to: 'sandbox#show'
 end
