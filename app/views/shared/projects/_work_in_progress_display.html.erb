@@ -1,3 +1,3 @@
-<% if @work_in_progress %>
-  <%= image_tag(@work_in_progress, size: "160x100", alt: "work in progress") %>
+<% if @project.versions.last.work_in_progress %>
+    <%= cl_image_tag(@project.versions.first.work_in_progress_url, size: "400x400", alt: "work in progress", class:"draggable work_in_progress") %>
 <% end %>
