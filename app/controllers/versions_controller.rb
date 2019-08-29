@@ -17,6 +17,6 @@ class VersionsController < ApplicationController
   end
 
   def version_params
-    params.require(:version).permit(:work_in_progress)
+    params.require(:version).permit(:photo)
   end
 end

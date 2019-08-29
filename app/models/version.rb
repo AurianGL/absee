@@ -3,6 +3,6 @@ class Version < ApplicationRecord
   has_many :comments
   has_one :color_swatch
 
-  mount_uploader :work_in_progress, PhotoUploader
+  mount_uploader :photo, PhotoUploader
 
 end

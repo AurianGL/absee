@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
     @last_version = @project.versions.last
     @comments = @last_version.comments
     @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
-    @work_in_progress = @last_version.work_in_progress if @last_version.work_in_progress
+    @photo = @last_version.photo if @last_version.photo
     @version = @project.versions.build
   end
 
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   end
 
   # def version_params
-  #   params.require(:version).permit(:project_id, :work_in_progress)
+  #   params.require(:version).permit(:project_id, :photo)
   # end
 
   def project_params

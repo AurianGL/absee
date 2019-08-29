@@ -47,7 +47,7 @@ version = Version.new(
   )
 
 url_version = "https://images-na.ssl-images-amazon.com/images/I/71lBoP-NNGL._SX425_.jpg"
-version.remote_work_in_progress_url = url_version
+version.remote_photo_url = url_version
 version.save!
 
 puts "version created"
