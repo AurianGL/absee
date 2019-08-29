@@ -4,6 +4,7 @@ ColorSwatch.destroy_all
 Comment.destroy_all
 Version.destroy_all
 Project.destroy_all
+Profile.destroy_all
 User.destroy_all
 
 puts "DB destroyed"

@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newComment">
-  New Comment
+<button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#newComment">
+<i class="far fa-comment-dots"></i>
 </button>
 
 <!-- Modal -->
@@ -20,10 +20,9 @@
           <%= f.input :image %>
           <%= f.input :image_cache, as: :hidden %>
             <div class="modal-footer">
-              <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-              <i class="icon-ok icon-white"></i> Save
+              <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle-save") do %>
+              <i class="fas fa-check"></i>
               <% end %>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
           <% end %>
         <% end %>

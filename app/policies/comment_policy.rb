@@ -1,5 +1,5 @@
 class CommentPolicy < ApplicationPolicy
   def create?
-    record.version.project.artist == user
+    user
   end
 end
