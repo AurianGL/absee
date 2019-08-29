@@ -1,7 +1,9 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#colorSwatch">
+<% if !@project.versions.last.color_swatch %>
+    <button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#colorSwatch">
 <i class="fas fa-fill-drip"></i>
-</button>
+  </button>
+<% end %>
 
 <!-- Modal -->
 <div class="modal fade" id="colorSwatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -14,23 +16,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <% if @last_version %>
          <%= simple_form_for [@last_version, @color_swatch] do |f| %>
            <%= f.color_field :color_1 %>
            <%= f.color_field :color_2 %>
            <%= f.color_field :color_3 %>
            <%= f.color_field :color_4 %>
            <%= f.color_field :color_5 %>
-           <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle") do %>
-           <i class="fas fa-check"></i>
-           <% end %>
-         <% end %>
+
+          <div class="modal-footer">
+          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="icon-ok icon-white"></i> Save
+          <% end %>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
         <% end %>
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
     </div>
   </div>
 </div>

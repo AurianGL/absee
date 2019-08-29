@@ -5,14 +5,15 @@ class ProjectsController < ApplicationController
 
   def show
     authorize @project
+    @last_version = @project.versions.last
 
     @comment = Comment.new
     @color_swatch = ColorSwatch.new
-    @last_version = @project.versions.last
-    @comments = @last_version.comments
-    @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
-    @work_in_progress = @last_version.work_in_progress if @last_version.work_in_progress
-    @version = @project.versions.build
+    # @last_version = @project.versions.last
+    # @comments = @last_version.comments
+    # @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
+    # @photo = @last_version.photo if @last_version.photo
+    @version = Version.new
   end
 
   def new
@@ -43,7 +44,7 @@ class ProjectsController < ApplicationController
   end
 
   # def version_params
-  #   params.require(:version).permit(:project_id, :work_in_progress)
+  #   params.require(:version).permit(:project_id, :photo)
   # end
 
   def project_params

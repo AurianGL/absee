@@ -17,17 +17,17 @@
         <% if @last_version %>
           <%= simple_form_for [@last_version, @comment] do |f| %>
           <%= f.input :description %>
-          <%= f.text_field :image %>
-            <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle") do %>
-            <i class="fas fa-check"></i>
-            <% end %>
+          <%= f.input :image %>
+          <%= f.input :image_cache, as: :hidden %>
+            <div class="modal-footer">
+              <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+              <i class="icon-ok icon-white"></i> Save
+              <% end %>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
           <% end %>
         <% end %>
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
     </div>
   </div>
 </div>
