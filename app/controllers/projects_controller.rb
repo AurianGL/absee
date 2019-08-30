@@ -21,6 +21,18 @@ class ProjectsController < ApplicationController
     authorize @project
   end
 
+  def update
+    @project.artist = User.find_by(email: params["q"])
+    if @project.save
+    flash[:notice] = 'Artist has been added'
+      redirect_to project_path(@project)
+    else
+      flash[:notice] = 'error'
+      redirect_to project_path(@project)
+    end
+  end
+
+
   def create
     @project = Project.new(project_params)
     authorize @project
