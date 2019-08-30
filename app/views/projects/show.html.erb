@@ -1,14 +1,16 @@
-<h1><%= @project.name %></h1>
-
-<div moodboard>
-  <%= render 'shared/projects/work_in_progress_display', project: @project %>
-  <%= render 'shared/projects/color_swatch_display', project: @project %>
-  <%= render 'shared/projects/comments_display', project: @project %>
-</div>
 
 
-<%= render 'shared/projects/popup_new_comment', project: @project  %>
-<%= render 'shared/projects/popup_color_swatch', project: @project  %>
-<%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
+  <h1><%= @project.name %></h1>
+
+  <div moodboard>
+    <%= render 'shared/projects/work_in_progress_display', project: @project %>
+    <%= render 'shared/projects/color_swatch_display', project: @project %>
+    <%= render 'shared/projects/comments_display', project: @project %>
+  </div>
+
+
+  <%= render 'shared/projects/popup_new_comment', project: @project  %>
+  <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+  <%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
 
 
