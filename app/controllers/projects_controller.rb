@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  layout "moodboard"
+
   before_action :set_project, only: [:show, :update]
   skip_after_action :verify_authorized
   skip_after_action :verify_policy_scoped
