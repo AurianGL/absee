@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :versions, only: [:index] do
     resources :color_swatches, only: [:create]
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :update]
   end
 
   resources :profiles, only: [:new, :create, :show]
