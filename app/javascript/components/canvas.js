@@ -25,7 +25,9 @@ const draw = (event) => {
 
   context.lineCap = 'round';
   context.lineJoin = 'round';
-  context.strokeStyle = 'black';
+  context.strokeStyle = '#00fff6';
+  context.lineWidth = 4;
+
 
   context.beginPath();
   context.moveTo(initX, initY);

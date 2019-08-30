@@ -1,15 +1,28 @@
-
-
-  <h1><%= @project.name %></h1>
-
-  <div moodboard>
-    <%= render 'shared/projects/work_in_progress_display', project: @project %>
-    <%= render 'shared/projects/color_swatch_display', project: @project %>
-    <%= render 'shared/projects/comments_display', project: @project %>
-  </div>
+<div class="container menu d-flex flex-column m-0">
+  <span class="p-1 text-left">
 
   <%= render 'shared/projects/popup_new_comment', project: @project  %>
+  </span>
+  <span class="p-1 text-left">
   <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+
+  </span>
+  <span class="p-1 text-left">
   <%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
 
+  </span>
+  <span class="p-1 text-left">
+  <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
+
+  </span>
+</div>
+
+<h1><%= @project.name %></h1>
+
+
+<div class="moodboard d-flex" >
+  <%= render 'shared/projects/work_in_progress_display', project: @project %>
+  <%= render 'shared/projects/color_swatch_display', project: @project %>
+  <%= render 'shared/projects/comments_display', project: @project %>
+</div>
 

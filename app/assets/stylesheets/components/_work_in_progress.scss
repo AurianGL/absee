@@ -1,5 +1,20 @@
 .work_in_progress {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: auto;
+  height: auto;
+
+  img {
+    object-fit: scale-down;
+    padding: 5px;
+    background-color: $very-light-grey;
+    margin-bottom: 10px;
+  }
+
+  .hand-icon  {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px 10px 0 0;
+  background-color: black;
+  }
 }
