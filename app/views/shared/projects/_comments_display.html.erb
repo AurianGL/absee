@@ -1,7 +1,15 @@
 <% @project.versions.last.comments.each do |comment| %>
   <div class="draggable comment">
-    <div class="hand-icon"> </div>
-    <%= cl_image_tag(comment.image_url, size: "200x200", alt: "erreur", draggable: false) %>
-    <%= comment.description %>
+    <% if comment.image.present? %>
+      <div class="hand-icon"> </div>
+      <%= cl_image_tag(comment.image_url, size: "200x200", alt: "erreur", draggable: false) %>
+      <canvas class="drawable comment-canvas">
+      </canvas>
+    <% end %>
+    <% if comment.description.present? %>
+      <div>
+        <%= comment.description %>
+      </div>
+    <% end %>
   </div>
 <% end %>
