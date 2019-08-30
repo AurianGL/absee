@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'projects/new', to: 'projects#create'
 
   resources :projects do
-    resources :versions, only: [:create]
+    resources :versions, only: [:create, :update, :edit]
   end
 
   resources :versions, only: [:index] do
