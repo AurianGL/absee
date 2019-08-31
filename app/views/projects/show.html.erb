@@ -4,7 +4,13 @@
   <%= render 'shared/projects/popup_new_comment', project: @project  %>
   </span>
   <span class="p-1 text-left">
-  <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+    <% if @project.versions.last.color_swatch.present? %>
+      <%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
+
+    <% else %>
+      <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+
+    <% end %>
 
   </span>
   <span class="p-1 text-left">
