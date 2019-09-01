@@ -15,14 +15,21 @@
     </canvas>
   </div>
 
-<a href="#" onclick="toggle_visibility('foo');">Click here to toggle visibility of element #foo</a>
+<!-- Rounded switch -->
+
+
+<label class="switch  href="#" onclick="visibility_toggle('foo');"">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
 
   <div id="foo" style="height: 200px; width: 200px; background-color: green;">
 
   </div>
 </div>
 
-<script>
+<!-- <script>
 function toggle_visibility(id) {
        var e = document.getElementById(id);
        console.log(e)
@@ -31,4 +38,4 @@ function toggle_visibility(id) {
        else
           e.style.display = 'block';
     }
-</script>
+</script> -->

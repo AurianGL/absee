@@ -1,9 +1,9 @@
 import "bootstrap";
 import {initDraggable} from "../components/draggable";
 import {initCanvas} from "../components/canvas";
-import {toggle_visibility} from "../components/toggle_visibility";
+import {visibility_toggle} from "../components/toggle_visibility";
 
 
 initDraggable();
 initCanvas();
-toggle_visibility();
+visibility_toggle();
