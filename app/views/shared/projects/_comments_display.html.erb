@@ -1,4 +1,4 @@
-<% @project.versions.last.comments.each do |comment| %>
+<% @project.comments.each do |comment| %>
   <div class="draggable comment">
     <div class="hand-icon" data-commentid="<%= comment.id %>"> </div>
     <% if comment.image.present? %>

@@ -13,11 +13,13 @@ Rails.application.routes.draw do
   end
 
   resources :versions, only: [:index] do
-    resources :color_swatches, only: [:create]
-    resources :comments, only: [:create, :update]
+    resources :color_swatches, only: [:create, :update, :edit]
+    resources :comments, only: [:create, :update, :edit]
   end
 
   resources :profiles, only: [:new, :create, :show]
+
+  resources :comments, only: [:update]
 
   get '/sandbox', to: 'sandbox#show'
 end

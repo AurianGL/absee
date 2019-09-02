@@ -8,12 +8,12 @@ class ProjectsController < ApplicationController
   def show
     authorize @project
     @last_version = @project.versions.last
+    # @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
 
     @comment = Comment.new
     @color_swatch = ColorSwatch.new
     # @last_version = @project.versions.last
     # @comments = @last_version.comments
-    # @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
     # @photo = @last_version.photo if @last_version.photo
     @version = Version.new
   end
