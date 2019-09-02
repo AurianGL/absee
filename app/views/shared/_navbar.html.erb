@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to dashboard_path, class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dav38qg9f/image/upload/v1567179533/Image_d_iOS_1_b6epm3.png" %>
     <% end %>
 
@@ -16,13 +16,13 @@
             <%= link_to current_user.email, dashboard_path %>
           </button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "dashboard", dashboard_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "DASHBOARD", dashboard_path, class: "dropdown-item" %>
+            <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-      <% else %>
+      <% else %>each_pair { |name, val|  }
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "LOGIN", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
