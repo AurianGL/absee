@@ -5,10 +5,11 @@
     <% if @versions.any? %>
      <h5>Versions</h5>
       <% @versions.each do |version| %>
-        <p><%= version %></p>
+        <p><%= version.name %></p>
         <%= link_to "View Version", version_path(version), class: "btn btn-flat" %>
       <% end %>
     <% end %>
    </div>
   </div>
 </div>
+
