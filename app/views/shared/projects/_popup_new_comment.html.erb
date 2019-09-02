@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-circle p-2" data-toggle="modal" data-target="#newComment">
+<button class="btn-circle-comment" data-toggle="modal" data-target="#newComment">
 <i class="far fa-comment-dots"></i>
 </button>
 
@@ -9,7 +9,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">New Comment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -20,7 +20,7 @@
           <%= f.input :image %>
           <%= f.input :image_cache, as: :hidden %>
             <div class="modal-footer">
-              <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle-save") do %>
+              <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
               <i class="fas fa-check"></i>
               <% end %>
             </div>
