@@ -9,15 +9,17 @@ Rails.application.routes.draw do
   post 'projects/new', to: 'projects#create'
 
   resources :projects do
-    resources :versions, only: [:create]
+    resources :versions, only: [:create, :update, :edit]
   end
 
   resources :versions, only: [:index] do
-    resources :color_swatches, only: [:create]
-    resources :comments, only: [:create]
+    resources :color_swatches, only: [:create, :update, :edit]
+    resources :comments, only: [:create, :update, :edit]
   end
 
   resources :profiles, only: [:new, :create, :show]
+
+  resources :comments, only: [:update]
 
   get '/sandbox', to: 'sandbox#show'
 end

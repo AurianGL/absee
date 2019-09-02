@@ -8,13 +8,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">add a color swatch</h5>
+        <h5 class="modal-title" id="exampleModalLabel">edit a color swatch</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-         <%= simple_form_for [@last_version, @color_swatch] do |f| %>
+         <%= simple_form_for [@last_version, @last_version.color_swatch] do |f| %>
            <%= f.color_field :color_1 %>
            <%= f.color_field :color_2 %>
            <%= f.color_field :color_3 %>

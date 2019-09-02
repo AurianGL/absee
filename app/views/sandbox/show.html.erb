@@ -1,10 +1,29 @@
-<h1>Sandbox#show</h1>
-<p>Find me in app/views/sandbox/show.html.erb</p>
-<div class="moodboard">
-  <div class="draggable"  style=" height: 100px; width: 100px; background: red; position: absolute;">
+
+
+  const layerMenu = document.querySelector(".clicker")
+  const hiddendiv = document.querySelector(".hiddendiv")
+
+  const show = () => {
+
+    layerMenu.addEventListener("mousedown",
+      const dropdown = (event) => {
+        console.log(event)
+            hiddendiv.style.display = "none"
+        }
+      );
+  }
+
+  show();
+
+</script>
+
+<div class="moodboard d-flex justify-content-center">
+  <div class="hand-icon draggable"  style=" height: 100px; width: 100px; background: red; position: absolute;">
 
   </div>
-  <div class="draggable"  style=" height: 100px; width: 100px; background: blue; position: absolute;">
+
+
+  <div class="hand-icon draggable" style=" height: 100px; width: 100px; background: blue; position: absolute;">
 
   </div>
   <div>
@@ -12,4 +31,28 @@
 
     </canvas>
   </div>
+
+<!-- Rounded switch -->
+
+
+<label class="switch"  href="#" onclick="visibility_toggle('foo');"">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+  <div id="foo" style="height: 200px; width: 200px; background-color: green;">
+
+  </div>
 </div>
+
+<!-- <script>
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       console.log(e)
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script> -->

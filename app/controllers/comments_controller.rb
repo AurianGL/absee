@@ -16,11 +16,15 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = comment.find(params[:id])
-    @comment.update(commment_params)
+    @comment = Comment.find(params[:id])
   end
 
   def update
+    if @comment.update(comment_params)
+      redirect_to comment_path(@comment)
+    else
+      render :edit
+    end
   end
 
   def comment_params

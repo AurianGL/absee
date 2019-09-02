@@ -1,6 +1,16 @@
-<% @project.versions.last.comments.each do |comment| %>
+<% @project.comments.each do |comment| %>
   <div class="draggable comment">
-    <%= cl_image_tag(comment.image_url, size: "200x200", alt: "erreur", draggable: false) %>
-    <%= comment.description %>
+    <div class="hand-icon" data-commentid="<%= comment.id %>"> </div>
+    <% if comment.image.present? %>
+      <%= cl_image_tag(comment.image_url, width: "300", height: "auto", alt: "erreur", draggable: false) %>
+      <div class="paint-comment">
+        <canvas class="drawable"></canvas>
+      </div>
+    <% end %>
+    <% if comment.description.present? %>
+      <div class="comment-text">
+        <%= comment.description %>
+      </div>
+    <% end %>
   </div>
 <% end %>
