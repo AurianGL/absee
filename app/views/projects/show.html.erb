@@ -23,6 +23,10 @@
   <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
 
   </span>
+  <span class="p-1 text-left">
+  <%= link_to "toto", project_versions_path(@project) %>
+
+  </span>
 </div>
 
 <h1><%= @project.name %></h1>
