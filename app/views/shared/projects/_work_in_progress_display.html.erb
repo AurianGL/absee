@@ -1,5 +1,4 @@
 <% if @project.versions.last.photo.present? %>
-
   <div class="draggable work_in_progress" style="top: <%= @project.versions.last.y %>px; left: <%= @project.versions.last.x %>px">
     <div class="hand-icon "><i class="far fa-hand-pointer"></i></div>
     <%= cl_image_tag(@project.versions.last.photo, width: "400", height: "auto", alt: "work in progress", class:"draggable", draggable: false) %>
