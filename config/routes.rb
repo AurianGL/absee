@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   post 'projects/new', to: 'projects#create'
 
   resources :projects do
-    resources :versions, only: [:create, :update, :edit]
+    resources :versions, only: [:create, :update, :edit, :index]
   end
 
-  resources :versions, only: [:index] do
+  resources :versions, only: [:show] do
     resources :color_swatches, only: [:create, :update, :edit]
     resources :comments, only: [:create, :update, :edit]
   end
