@@ -1,0 +1,7 @@
+<% if @version.present? %>
+  <div class="draggable work_in_progress">
+    <div class="hand-icon "></div>
+    <%= cl_image_tag(@version.photo, width: "400", height: "auto", alt: "work in progress", class:"draggable", draggable: false) %>
+    <canvas></canvas>
+  </div>
+<% end %>
