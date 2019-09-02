@@ -8,6 +8,7 @@ const resize = (event) => {
   const sizeToApply = e.dataset.size
   currentCommentToResize = e.parentElement;
   console.log(currentCommentToResize);
+  currentCommentToResize.classList.remove('big', 'small', 'medium')
   currentCommentToResize.classList.add(`${sizeToApply}`);
 }
 
