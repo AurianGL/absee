@@ -30,9 +30,12 @@ const savePosition = (comment_id, x, y) => {
       "Y": y,
     })
   })
-    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      response.json()
+    })
     .then((data) => {
-      console.log(data.hits);
+      console.log(data);
   });
 };
 

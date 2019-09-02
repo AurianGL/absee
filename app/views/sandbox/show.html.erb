@@ -1,21 +1,31 @@
+<h1>Sandbox#show</h1>
+<p>Find me in app/views/sandbox/show.html.erb</p>
 
-
-  const layerMenu = document.querySelector(".clicker")
-  const hiddendiv = document.querySelector(".hiddendiv")
-
-  const show = () => {
-
-    layerMenu.addEventListener("mousedown",
-      const dropdown = (event) => {
-        console.log(event)
-            hiddendiv.style.display = "none"
-        }
-      );
-  }
-
-  show();
-
-</script>
+<div class="layer-menu">
+  <div class="clicker" tabindex="1">layers</div>
+  <div class="hiddendiv">
+    <div>
+      work in progress
+      <label class="switch"  href="#" onclick="visibility_toggle('foo');">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div>
+       réfs
+      <label class="switch"  href="#" onclick="visibility_toggle('foo');">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div> réfs
+      <label class="switch"  href="#" onclick="visibility_toggle('foo');">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
 
 <div class="moodboard d-flex justify-content-center">
   <div class="hand-icon draggable"  style=" height: 100px; width: 100px; background: red; position: absolute;">
@@ -35,19 +45,26 @@
 <!-- Rounded switch -->
 
 
-<label class="switch"  href="#" onclick="visibility_toggle('foo');"">
-  <input type="checkbox">
+<label class="switch toggler" data-type="client" href="#">
+  <input type="checkbox" >
   <span class="slider round"></span>
 </label>
 
 
-  <div id="foo" style="height: 200px; width: 200px; background-color: green;">
+  <div  class="client"  style="height: 200px; width: 200px; background-color: green;">
 
   </div>
 </div>
 
+<div class="sizable" style="height: 300px; background-color: orange;">
+  <div class="resizeIcon" data-size="big" style="height: 100px; width: 70px; background-color: white; margin: 2px;"></div>
+  <div class="resizeIcon" data-size="medium" style="height: 100px; width: 70px; background-color: white; margin: 2px;"></div>
+  <div class="resizeIcon" data-size="small" style="height: 100px; width: 70px; background-color: white; margin: 2px;"></div>
+
+</div>
+
 <!-- <script>
-function toggle_visibility(id) {
+function visibility_toggle(id) {
        var e = document.getElementById(id);
        console.log(e)
        if(e.style.display == 'block')
