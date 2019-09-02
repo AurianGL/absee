@@ -1,32 +1,26 @@
+<div class="container-fluid header">
+    <h2><%= @project.name %></h2>
+      <button class="btn-circle-plus"><i class="fas fa-plus"></i></button>
+  <button class="p-1 text-left">
+  <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
+  </button>
+</div>
 
-
-<div class="container menu d-flex flex-column m-0">
+<div class="container menu d-flex">
   <span class="p-1 text-left">
-
   <%= render 'shared/projects/popup_new_comment', project: @project  %>
   </span>
   <span class="p-1 text-left">
     <% if @project.versions.last.color_swatch.present? %>
       <%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
-
     <% else %>
       <%= render 'shared/projects/popup_color_swatch', project: @project  %>
-
     <% end %>
-
   </span>
   <span class="p-1 text-left">
   <%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
-
-  </span>
-  <span class="p-1 text-left">
-  <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
-
   </span>
 </div>
-
-<h1><%= @project.name %></h1>
-
 
 <div class="moodboard d-flex" >
   <%= render 'shared/projects/work_in_progress_display', project: @project %>
