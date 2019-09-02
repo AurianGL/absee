@@ -1,5 +1,5 @@
 <% @project.comments.each do |comment| %>
-  <div class="draggable comment">
+  <div class="draggable comment" style="top: <%= comment.y %>px; left: <%= comment.x %>px">
     <div class="hand-icon" data-commentid="<%= comment.id %>"> </div>
     <% if comment.image.present? %>
       <%= cl_image_tag(comment.image_url, width: "300", height: "auto", alt: "erreur", draggable: false) %>
@@ -12,5 +12,8 @@
         <%= comment.description %>
       </div>
     <% end %>
+    <div style="display: none;">
+      <%= render 'shared/projects/update_comments', comment: comment %>
+    </div>
   </div>
 <% end %>
