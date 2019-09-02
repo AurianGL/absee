@@ -20,21 +20,24 @@ const stop = (event) => {
   // console.log(event.target.dataset.commentid)
 }
 
-const savePosition = (comment_id, x, y) => {
-  // fetch pour updater les champs x et y sur le modele comment
-  console.log(comment_id, x, y)
-  fetch(`/comments/${comment_id}`, {
-    method: "PATCH",
-    body: JSON.stringify({
-      "X": x,
-      "Y": y,
-    })
-  })
-    .then(response => response.json())
-    .then((data) => {
-      console.log(data.hits);
-  });
-};
+// const savePosition = (comment_id, x, y) => {
+//   // fetch pour updater les champs x et y sur le modele comment
+//   console.log(comment_id, x, y)
+//   fetch(`/comments/${comment_id}`, {
+//     method: "PATCH",
+//     body: JSON.stringify({
+//       "X": x,
+//       "Y": y,
+//     })
+//   })
+//     .then(response => {
+//       console.log(response)
+//       response.json()
+//     })
+//     .then((data) => {
+//       console.log(data);
+//   });
+// };
 
 const drag = (event) => {
   // console.log(currentDraggable);
