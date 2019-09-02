@@ -14,7 +14,9 @@ const visibilityToggle = (event) => {
 
 
 const initToggleVisibility = () => {
+  if( toggler ) {
     toggler.addEventListener("change", visibilityToggle);
+  }
 }
 
 export {initToggleVisibility}

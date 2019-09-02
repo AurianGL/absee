@@ -1,11 +1,12 @@
 const handIcons = document.querySelectorAll(".hand-icon");
 
+
 let initY;
 let initX;
 let currentDraggable;
 
 const start = (event) => {
-  // console.log(event);
+  console.log(event);
   currentDraggable = event.currentTarget.parentElement;
   // console.log(currentDraggable)
   initY = event.clientY - currentDraggable.offsetTop;
@@ -57,8 +58,10 @@ const drag = (event) => {
 
 const initDraggable = () => {
   handIcons.forEach((handIcon) => {
-    handIcon.addEventListener( "mousedown", start);
-    handIcon.addEventListener( "mouseup", stop);
+    if ( handIcon ){
+      handIcon.addEventListener( "mousedown", start);
+        handIcon.addEventListener( "mouseup", stop);
+      }
   });
 }
 export {initDraggable}

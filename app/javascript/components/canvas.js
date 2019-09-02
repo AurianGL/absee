@@ -39,8 +39,10 @@ const draw = (event) => {
 
 const initCanvas = () => {
   drawables.forEach((drawable) => {
-    drawable.addEventListener( "mousedown", start);
-    drawable.addEventListener( "mouseup", stop);
+    if ( drawable ){
+        drawable.addEventListener( "mousedown", start);
+        drawable.addEventListener( "mouseup", stop);
+      }
   });
 }
 
