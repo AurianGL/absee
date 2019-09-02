@@ -1,56 +1,74 @@
 .btn-flat {
   font-size: 0.75rem;
-  color: black;
-  padding: 8px 24px;
+  color: $blue;
+  padding: 4px 17px 6px;
   border-radius: 4px;
-  background: white;
+  background-color: $light-blue;
   transition: background 0.3s ease;
+  border: none;
 }
 
 .btn-flat:hover {
-  background: black;
+  padding: 6px 19px 9px;
+}
+
+.btn-circle-paint {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 20px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-circle-paint:hover {
   color: white;
+  background-color: $blue;
 }
 
-.btn-circle {
-  color: $grey-blue;
-  background: $very-light-grey;
-  width: 30px;
-  height: 30px;
+.btn-circle-comment {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
+  padding: 3px 0;
+  font-size: 23px;
   line-height: 1.428571429;
-  border-radius: 15px;
-  border: $gray;
+  border-radius: 20px;
+  border: none;
 }
 
-.btn-circle:hover {
-  color: $blue;
-  background: $very-light-grey;
+.btn-circle-comment:hover {
+  color: white;
+  background-color: $yellow;
 }
 
-.btn-circle-save {
-  color: $grey-blue;
-  background: $very-light-grey;
-  width: 30px;
-  height: 30px;
+.btn-circle-version {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
+  padding: 3px 0;
+  font-size: 23px;
   line-height: 1.428571429;
-  border-radius: 15px;
-  border: $gray;
+  border-radius: 20px;
+  border: none;
 }
 
-.btn-circle-save:hover {
-  color: $green;
-  background: $very-light-grey;
+.btn-circle-version:hover {
+  color: white;
+  background-color: $red;
 }
 
-.btn-circle-plus {
-  color: $grey-blue;
-  background: $very-light-grey;
+.btn-circle-artist {
+  color: black;
+  background: white;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -58,16 +76,66 @@
   font-size: 30px;
   line-height: 1.428571429;
   border-radius: 30px;
-  border: $gray;
+  border: 3px solid black;
+}
+
+.btn-circle-artist:hover {
+  color: $red;
+  border: 3px solid $red;
+}
+
+.btn-circle-save {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 22px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-circle-save:hover {
+  color: white;
+  background-color: $yellow;
+}
+
+.btn-circle-view {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 22px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-circle-view:hover {
+  color: white;
+  background-color: $yellow;
+}
+
+.btn-circle-plus {
+  color: black;
+  background: white;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 30px;
+  line-height: 1.428571429;
+  border-radius: 30px;
+  border: 3px solid black;
 }
 
 .btn-circle-plus:hover {
-  width: 66px;
-  height: 66px;
-  font-size: 33px;
-  color: $grey-blue;
-  background: $very-light-grey;
-  border-radius: 33px;
+  color: $blue;
+  border: 3px solid $blue;
 }
 
 // toggle button

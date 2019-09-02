@@ -13,7 +13,12 @@ class VersionsController < ApplicationController
 
   def index
     @project = Project.find(params[:project_id])
-    @versions = @project.versions.all
+    @versions = policy_scope(@project.versions)
+  end
+
+  def show
+    @version = Version.find(params[:id])
+    authorize @version
   end
 
   def update

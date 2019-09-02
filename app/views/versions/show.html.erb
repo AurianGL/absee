@@ -1,0 +1,11 @@
+  <p>something</p>
+  <p><%= @version.name %></p>
+  <p><%= @version.created_at %></p>
+  <p><%= @version.project_id %></p>
+
+
+<div class="moodboard d-flex" >
+  <%= render 'shared/projects/version_display', project: @project %>
+  <%= render 'shared/projects/version_comments_display', project: @project %>
+</div>
+

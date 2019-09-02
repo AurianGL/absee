@@ -1,4 +1,6 @@
-  const resizeIcons = document.querySelectorAll('.resizeIcon')
+
+const resizeIcons = document.querySelectorAll('.resizeIcon')
+
 
 let currentCommentToResize;
 
