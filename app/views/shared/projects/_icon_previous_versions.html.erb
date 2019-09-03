@@ -9,9 +9,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Previous Versions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       <div class="modal-body">
         <% if @last_version %>
           <%= simple_form_for [@last_version, @comment] do |f| %>

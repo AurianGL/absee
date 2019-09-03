@@ -10,12 +10,14 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Onboard an Artist</h5>
-        <button class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Share Your Project</h5>
       </div>
-      <div class="modal-body">
+        <div  class="modal-body" style="text-align: left;">
+            <p>Hello,</p>
+            <p>Here is our project <strong><%= @project.name %></strong>.</p>
+            <p>"<%= @project.brief %>"</p>
+        </div>
+      <div class="modal-body" style="text-align: left;">
         <%= form_with(url: project_path(@project), method: "patch", local: true) do %>
           <%= label_tag(:q, "artist email") %>
           <%= text_field_tag(:q) %>

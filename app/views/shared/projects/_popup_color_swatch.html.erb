@@ -8,10 +8,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">add a color swatch</h5>
-        <button class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Add Color Swatch</h5>
       </div>
       <div class="modal-body">
          <%= simple_form_for [@last_version, @color_swatch] do |f| %>
@@ -22,10 +19,10 @@
            <%= f.color_field :color_5 %>
 
           <div class="modal-footer">
-          <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
-          <i class="fas fa-check"></i>
-          <% end %>
-        </div>
+            <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
+            <i class="fas fa-check"></i>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>

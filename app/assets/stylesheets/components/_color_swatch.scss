@@ -2,6 +2,7 @@
   height: 80px;
   width: 80px;
   margin: 5px;
+  border: 5px solid white;
 }
 
 .color_swatch {
@@ -9,10 +10,65 @@
 
   .stuff {
     padding: 10px;
-    background-color: #b2aeae;
+    background-color: white;
   }
 
   .hand-icon  {
     position: absolute
   }
+}
+
+.edit_color_swatch {
+  margin: 20px 20px 0px 22px;
+  text-align: center;
+}
+
+.new_color_swatch {
+  margin: 20px 20px 0px 22px;
+  text-align: center;
+}
+
+#color_swatch_color_1 {
+  width: 70px;
+  height: 70px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 0.5px 1px;
+}
+
+#color_swatch_color_2 {
+  width: 70px;
+  height: 70px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 0.5px 1px;
+}
+
+#color_swatch_color_3 {
+  width: 70px;
+  height: 70px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 0.5px 1px;
+}
+
+#color_swatch_color_4 {
+  width: 70px;
+  height: 70px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 0.5px 1px;
+}
+
+#color_swatch_color_5 {
+  width: 70px;
+  height: 70px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  padding: 0.5px 0px;
 }
