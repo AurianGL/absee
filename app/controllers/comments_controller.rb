@@ -20,14 +20,26 @@ class CommentsController < ApplicationController
   end
 
   def update
+    @comment = Comment.find(params[:id])
+    @project = @comment.version.project
+    authorize @comment
+
     if @comment.update(comment_params)
-      redirect_to comment_path(@comment)
+      redirect_to project_path(@project)
     else
-      render :edit
+      flash[:notice] = "couldn't update comment"
+      redirect_to project_path(@project)
     end
   end
 
   def comment_params
-    params.require(:comment).permit(:description, :image)
+    params.require(:comment).permit(:description, :image, :x, :y)
   end
 end
+
+# @color_swatch = ColorSwatch.find(params[:id])
+#     @version = Version.find(params[:version_id])
+#     @project = @version.project
+#     authorize @color_swatch
+
+

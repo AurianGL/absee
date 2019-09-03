@@ -1,10 +1,22 @@
 
-const visibility_toggle = (id) => {
- var e = document.getElementById(id);
- if(e.style.display == 'block')
-    e.style.display = 'none';
- else
-    e.style.display = 'block';
+
+const toggler = document.querySelector(".toggler");
+
+const visibilityToggle = (event) => {
+  const e = event.currentTarget
+  const divsToHide = document.querySelectorAll(`.${e.dataset.type}`);
+ // console.log(event);
+ console.log(divsToHide);
+    divsToHide.forEach((divToHide) => {
+      divToHide.classList.toggle('hideComment');
+    });
 }
 
-export {visibility_toggle}
+
+const initToggleVisibility = () => {
+  if( toggler ) {
+    toggler.addEventListener("change", visibilityToggle);
+  }
+}
+
+export {initToggleVisibility}

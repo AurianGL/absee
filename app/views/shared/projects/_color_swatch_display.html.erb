@@ -1,6 +1,6 @@
 <% if  @project.versions.last.color_swatch.present? %>
 
-    <div class="draggable color_swatch">
+    <div class="draggable color_swatch" style="top: <%= @project.versions.last.color_swatch.y %>px; left: <%= @project.versions.last.color_swatch.x %>px">
       <div class="hand-icon d-flex stuff">
 
         <div class="color" style="background-color: <%= @project.versions.last.color_swatch.color_1 %>"></div>
@@ -13,6 +13,9 @@
 
         <div class="color" style="background-color: <%= @project.versions.last.color_swatch.color_5 %>"></div>
       </div>
+      <div style="display: none;">
+      <%= render 'shared/projects/update_coordinates', path: [@last_version, @last_version.color_swatch] %>
+    </div>
   </div>
 <% end %>
 
