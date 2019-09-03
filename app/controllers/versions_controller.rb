@@ -18,7 +18,26 @@ class VersionsController < ApplicationController
 
   def show
     @version = Version.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @previous_versions = @project.versions.where("id <= ?", @version.id)
     authorize @version
+  end
+
+  def update
+    @version = Version.find(params[:id])
+    @project = @version.project
+    authorize @version
+
+    if @version.update(version_params)
+      redirect_to project_path(@project)
+    else
+      flash[:notice] = "couldn't update WIP"
+      redirect_to project_path(@project)
+    end
+  end
+
+  def edit
+    Version.find(params[:version_id])
   end
 
   def version_params

@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     authorize @project
     @project.customer = current_user
-    # @project.artist = current_user
+    #@project.artist = current_user
     if @project.save
       version_name = @project.name.gsub(' ', '_') + "_V0"
       @version = Version.new(name: version_name)
