@@ -1,8 +1,13 @@
 <% @project.comments.each do |comment| %>
-  <div class="draggable comment">
-    <div class="hand-icon" data-commentid="<%= comment.id %>"> </div>
+  <div class="draggable comment" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px">
+    <div class="d-flex">
+      <div class="hand-icon" ></div>
+      <div class="resizeIcon" data-size="big" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
+      <div class="resizeIcon" data-size="medium" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
+      <div class="resizeIcon" data-size="small" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
+    </div>
     <% if comment.image.present? %>
-      <%= cl_image_tag(comment.image_url, width: "300", height: "auto", alt: "erreur", draggable: false) %>
+      <%= cl_image_tag(comment.image_url, height: "auto", alt: "erreur", draggable: false, class: "medium ") %>
       <div class="paint-comment">
         <canvas class="drawable"></canvas>
       </div>
@@ -12,5 +17,8 @@
         <%= comment.description %>
       </div>
     <% end %>
+    <div style="display: none;">
+      <%= render 'shared/projects/update_coordinates', path: comment %>
+    </div>
   </div>
 <% end %>

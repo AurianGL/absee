@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-circle p-2" data-toggle="modal" data-target="#colorSwatch">
+  <button class="btn-circle-paint" data-toggle="modal" data-target="#colorSwatch">
   <i class="fas fa-fill-drip"></i>
   </button>
 
@@ -9,7 +9,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">add a color swatch</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -22,7 +22,7 @@
            <%= f.color_field :color_5 %>
 
           <div class="modal-footer">
-          <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle-save") do %>
+          <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
           <i class="fas fa-check"></i>
           <% end %>
         </div>

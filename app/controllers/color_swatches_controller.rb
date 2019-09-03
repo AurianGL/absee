@@ -38,7 +38,7 @@ class ColorSwatchesController < ApplicationController
   private
 
   def color_swatch_params
-    params.require(:color_swatch).permit(:color_1, :color_2, :color_3, :color_4, :color_5)
+    params.require(:color_swatch).permit(:color_1, :color_2, :color_3, :color_4, :color_5, :x, :y)
   end
 
 

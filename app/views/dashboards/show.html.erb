@@ -1,17 +1,18 @@
-<div class="d-flex">
- <div class="m-3 col-6">
-  <div class="container d-flex justify-content-start align-items-stretch m-0 col-12 flex-column">
-   <div class="ml-3">
+<div class="dashboard d-flex">
     <% if @customer_projects.any? %>
      <h1>Dashboard</h1>
-     <%= link_to "Create project", new_project_path, class: "btn btn-flat" %>
+        <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
+        <i class="fas fa-plus"></i>
+        <% end %>
+        <%= link_to "Get started", new_project_path(@project), class: "a" %>
      <% @customer_projects.each do |project| %>
       <div class="card-product mt-3">
        <%#= image_tag "#" %>
        <div class="card-product-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
-        <%= link_to "View Project", project_path(project), class: "btn btn-flat" %>
+          <i class="btn-circle-view far fa-eye"></i>
+        <%= link_to "View Project", project_path(project), class: "a" %>
        </div>
       </div>
      <% end %>
@@ -24,7 +25,7 @@
        <div class="card-product-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
-        <%= link_to "View Project", project_path(project), class: "btn btn-flat" %>
+        <%= link_to "View Project", project_path(project), class: "a" %>
        </div>
       </div>
      <% end %>
@@ -32,9 +33,6 @@
     <% if !@customer_projects.any? && !@artist_projects.any? %>
      <h3><i class="fas fa-palette"></i> Moodboards made effective.</h3>
      <p>Bring your ideas to life, start your first project.</p>
-     <%= link_to "Get started", new_project_path(@project), class: "btn btn-flat" %>
+     <%= link_to "Get started", new_project_path(@project), class: "a" %>
     <% end %>
-   </div>
-  </div>
- </div>
 </div>

@@ -1,7 +1,7 @@
-body, h2 {
+body {
   text-align: center;
-  text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: 'Open Sans';
+  color: black;
 }
 
 #wrapper {
@@ -12,34 +12,36 @@ body, h2 {
     */;
 }
 
-.whitebox {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  right: 0;
-}
-
-.white {
-  background-color: #fff;
-  display: inline-block;
-}
-
-h1 {
-  color: #FFF;
-  font-weight: 100;
-  font-family: "Baumans", cursive;
-  font-size: 60px;
+.container h1 {
+  color: black;
+  font-style: bold;
+  font-weight: 120;
+  font-family: 'Montserrat', sans-serif;
   font-size: 7vw;
-  letter-spacing: 5px;
   padding: 0 30px;
+  margin-top: 70px;
+  margin-bottom: 5px;
 }
 
-h2 {
-  font-family: "Baumans", cursive;
-  -webkit-text-fill-color: transparent;
+.container a {
+  color: $blue;
+  font-style: bold;
+  text-decoration: none;
+  background: $light-blue;
+  padding: 4px 17px 6px;
+}
+
+.container a:hover {
+  padding: 6px 19px 9px;
+}
+
+.container h2 {
+  font-family: 'Montserrat', sans-serif;
   -webkit-background-clip: text;
   padding: 0 20px;
   font-size: 3vw;
+  color: black;
+  margin-bottom: 50px;
 }
 
 @media all and (max-width: 480px){
