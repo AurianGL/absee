@@ -11,7 +11,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Add Color Swatch</h5>
       </div>
       <div class="modal-body">
-         <%= simple_form_for [@last_version, @color_swatch] do |f| %>
+         <%= simple_form_for [@last_version, @color_swatch], remote: true do |f| %>
            <%= f.color_field :color_1 %>
            <%= f.color_field :color_2 %>
            <%= f.color_field :color_3 %>
