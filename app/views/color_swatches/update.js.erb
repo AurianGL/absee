@@ -1,0 +1,8 @@
+function updateColorSwatch(colorSwatchHTML) {
+  const colorSwatch = document.querySelector('.color_swatch');
+  colorSwatch.outerHTML = colorSwatchHTML;
+
+  window.jquery('#colorSwatch, #colorSwatchEdit').modal('hide');
+}
+
+updateColorSwatch('<%= j render "shared/projects/color_swatch_display", project: @project, version: @version %>');
