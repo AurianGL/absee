@@ -7,18 +7,18 @@
       <div class="resizeIcon" data-size="medium" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
       <div class="resizeIcon" data-size="small" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
 
-      <label class="switch toggler" data-type="<%="#{comment.id}#{comment.user.id}" %>" href="#">
+      <label class="switch toggler" data-type="<%="C#{comment.id}#{comment.user.id}" %>" href="#">
         <input type="checkbox" >
         <span class="slider round"></span>
       </label>
     </div>
 
-    <div class="<%= "#{comment.id}#{comment.user.id}" %>">
+    <div class="<%= "C#{comment.id}#{comment.user.id}" %>">
       <% if comment.image.present? %>
         <%= cl_image_tag(comment.image_url, height: "auto", alt: "erreur", draggable: false, class: "medium ") %>
-        <div class="paint-comment">
+        <!-- <div class="paint-comment">
           <canvas class="drawable"></canvas>
-        </div>
+        </div> -->
       <% end %>
       <% if comment.description.present? %>
         <div class="comment-text">

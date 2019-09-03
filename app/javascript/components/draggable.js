@@ -27,8 +27,9 @@ const savePosition = ( x, y , currentDraggable) => {
   console.log(currentDraggable);
   const coordinateForm = currentDraggable.querySelector(".coordinate-form");
   coordinateForm.querySelector(".coordinate-form-x").value = x;
-  coordinateForm.querySelector(".coordinate-form-y").value = y;
-  coordinateForm.submit();
+  coordinateForm.querySelector(".coordinate-form-y").value = y - 238;
+  // coordinateForm.submit();
+  coordinateForm.querySelector(".coordinate-form-submit").click();
 }
 
 // const savePosition = (comment_id, x, y) => {
