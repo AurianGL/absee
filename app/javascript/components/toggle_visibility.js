@@ -1,11 +1,12 @@
 
 
-const toggler = document.querySelector(".toggler");
+const togglers = document.querySelectorAll(".toggler");
 
 const visibilityToggle = (event) => {
-  const e = event.currentTarget
+  console.log("coucou");
+  let e = event.currentTarget
   const divsToHide = document.querySelectorAll(`.${e.dataset.type}`);
- // console.log(event);
+ console.log(event);
  console.log(divsToHide);
     divsToHide.forEach((divToHide) => {
       divToHide.classList.toggle('hideComment');
@@ -14,8 +15,10 @@ const visibilityToggle = (event) => {
 
 
 const initToggleVisibility = () => {
-  if( toggler ) {
-    toggler.addEventListener("change", visibilityToggle);
+  if( togglers ) {
+    togglers.forEach((toggler) => {
+      toggler.addEventListener("change", visibilityToggle);
+    });
   }
 }
 
