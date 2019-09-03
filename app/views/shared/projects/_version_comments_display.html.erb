@@ -7,11 +7,6 @@
             <canvas class="drawable"></canvas>
           </div>
       <% end %>
-      <% if comment.description.present? %>
-        <div class="comment-text">
-          <%= comment.description %>
-        </div>
-      <% end %>
     <% end %>
   </div>
 <% end %>
@@ -19,9 +14,9 @@
 
  <div class="draggable comment">
     <div class="hand-icon" > </div>
-      <% @previous_versions.each do |pv| %>
-        <% pv.comments.each do |c| %>
+    <% @previous_versions.each do |pv| %>
+      <% pv.comments.each do |c| %>
         <%= c.description %>
-        <% end %>
       <% end %>
+    <% end %>
 </div>
