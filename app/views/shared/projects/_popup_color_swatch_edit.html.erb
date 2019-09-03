@@ -8,10 +8,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">edit a color swatch</h5>
-        <button class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Color Swatch</h5>
       </div>
       <div class="modal-body">
          <%= simple_form_for [@last_version, @last_version.color_swatch], remote: true do |f| %>
@@ -20,11 +17,12 @@
            <%= f.color_field :color_3 %>
            <%= f.color_field :color_4 %>
            <%= f.color_field :color_5 %>
-
           <div class="modal-footer">
+
             <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
               <i class="fas fa-check"></i>
             <% end %>
+
           </div>
         <% end %>
       </div>
