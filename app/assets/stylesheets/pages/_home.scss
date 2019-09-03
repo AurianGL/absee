@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: 'Lexend Deca', sans-serif;
   color: black;
 }
 
@@ -14,20 +14,22 @@ body {
 
 .container h1 {
   color: black;
-  font-style: bold;
   font-weight: 120;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 7vw;
-  padding: 0 30px;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 5px;
 }
 
+.cta {
+  margin-top: 50px;
+}
+
 .container a {
-  color: $blue;
+  color: white;
   font-style: bold;
   text-decoration: none;
-  background: $light-blue;
+  background: blue;
   padding: 4px 17px 6px;
 }
 
@@ -36,11 +38,12 @@ body {
 }
 
 .container h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-background-clip: text;
   padding: 0 20px;
   font-size: 3vw;
   color: black;
+  margin-top: 5px;
   margin-bottom: 50px;
 }
 
