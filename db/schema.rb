@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_09_03_111222) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +28,8 @@
     t.datetime "updated_at", null: false
     t.string "x"
     t.string "y"
+    t.string "size", default: "medium"
+    t.boolean "display", default: true
     t.index ["artist_as_id"], name: "index_color_swatches_on_artist_as_id"
     t.index ["version_id"], name: "index_color_swatches_on_version_id"
   end
@@ -40,6 +44,8 @@
     t.datetime "updated_at", null: false
     t.string "x"
     t.string "y"
+    t.string "size", default: "medium"
+    t.boolean "display", default: true
     t.index ["user_id"], name: "index_comments_on_user_id"
     t.index ["version_id"], name: "index_comments_on_version_id"
   end
@@ -88,6 +94,8 @@
     t.string "name"
     t.string "x"
     t.string "y"
+    t.string "size", default: "medium"
+    t.boolean "display", default: true
     t.index ["project_id"], name: "index_versions_on_project_id"
   end
 

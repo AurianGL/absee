@@ -8,7 +8,10 @@ class CommentsController < ApplicationController
     authorize @comment
     if @comment.save
       flash[:notice] = 'your comment has been added'
-      redirect_to project_path(@project)
+      respond_to do |format|
+        format.html { redirect_to project_path(@project) }
+        format.js # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
       flash[:notice] = 'error'
       redirect_to project_path(@project)
@@ -27,7 +30,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       respond_to do |format|
         format.html { redirect_to project_path(@project) }
-        format.js # <-- will render `app/views/reviews/create.js.erb`
+        format.js # <-- will render `app/views/comment/update.js.erb`
       end
     else
       flash[:notice] = "couldn't update comment"
