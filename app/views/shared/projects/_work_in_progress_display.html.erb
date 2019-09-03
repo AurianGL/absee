@@ -1,9 +1,11 @@
 <% if @project.versions.last.photo.present? %>
   <div class="draggable work_in_progress" style="top: <%= @project.versions.last.y %>px; left: <%= @project.versions.last.x %>px">
-    <div class="hand-icon "><i class="far fa-hand-pointer"></i></div>
+    <div>
+      <div class="hand-icon "><i class="far fa-hand-pointer"></i></div>
+    </div>
     <%= cl_image_tag(@project.versions.last.photo, width: "400", height: "auto", alt: "work in progress", class:"draggable", draggable: false) %>
-    <canvas></canvas>
-    <div style="display: none;">
+<!--     <canvas></canvas>
+ -->    <div style="display: none;">
       <%= render 'shared/projects/update_coordinates', path: [@project, @project.versions.last] %>
     </div>
   </div>
