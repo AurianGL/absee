@@ -1,4 +1,5 @@
 const handIcons = document.querySelectorAll(".hand-icon");
+const moodboard = document.querySelector(".moodboard");
 
 
 let initY;
@@ -7,17 +8,17 @@ let currentDraggable;
 
 const start = (event) => {
   console.log(event);
-  currentDraggable = event.currentTarget.parentElement;
-  // console.log(currentDraggable)
+  currentDraggable = event.currentTarget.parentElement.parentElement;
+  console.log(currentDraggable);
   initY = event.clientY - currentDraggable.offsetTop;
   initX = event.clientX - currentDraggable.offsetLeft;
-  window.addEventListener("mousemove", drag);
+  moodboard.addEventListener("mousemove", drag);
 }
 
 const stop = (event) => {
   // currentDraggable = event.currentTarget.parentElement;
   console.log(event);
-  window.removeEventListener("mousemove", drag);
+  moodboard.removeEventListener("mousemove", drag);
   savePosition( event.clientX, event.clientY, currentDraggable);
   // console.log(event.target.dataset.commentid)
 }
@@ -26,8 +27,9 @@ const savePosition = ( x, y , currentDraggable) => {
   console.log(currentDraggable);
   const coordinateForm = currentDraggable.querySelector(".coordinate-form");
   coordinateForm.querySelector(".coordinate-form-x").value = x;
-  coordinateForm.querySelector(".coordinate-form-y").value = y;
-  coordinateForm.submit();
+  coordinateForm.querySelector(".coordinate-form-y").value = y - 238;
+  // coordinateForm.submit();
+  coordinateForm.querySelector(".coordinate-form-submit").click();
 }
 
 // const savePosition = (comment_id, x, y) => {
@@ -58,7 +60,7 @@ const drag = (event) => {
 
 const initDraggable = () => {
   handIcons.forEach((handIcon) => {
-    if ( handIcon ){
+    if ( handIcon ) {
       handIcon.addEventListener( "mousedown", start);
         handIcon.addEventListener( "mouseup", stop);
       }
