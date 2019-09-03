@@ -12,6 +12,24 @@
   padding: 6px 19px 9px;
 }
 
+.btn-circle-save {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 22px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-circle-save:hover {
+  color: white;
+  background-color: $yellow;
+}
+
 .btn-circle-paint {
   color: black;
   background-color: white;
@@ -84,24 +102,6 @@
   border: 3px solid $red;
 }
 
-.btn-circle-save {
-  color: black;
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  padding: 3px 0;
-  font-size: 22px;
-  line-height: 1.428571429;
-  border-radius: 20px;
-  border: none;
-}
-
-.btn-circle-save:hover {
-  color: white;
-  background-color: $yellow;
-}
-
 .btn-circle-view {
   color: black;
   background-color: white;
@@ -120,6 +120,24 @@
   background-color: $yellow;
 }
 
+.btn-circle-view-big {
+  color: black;
+  background: white;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 30px;
+  line-height: 1.428571429;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+.btn-circle-view-big:hover {
+  color: $yellow;
+  border: 3px solid $yellow;
+}
+
 .btn-circle-plus {
   color: black;
   background: white;
@@ -136,6 +154,24 @@
 .btn-circle-plus:hover {
   color: $blue;
   border: 3px solid $blue;
+}
+
+.btn-circle-versions {
+  color: black;
+  background: white;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 30px;
+  line-height: 1.428571429;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+.btn-circle-versions:hover {
+  color: $yellow;
+  border: 3px solid $yellow;
 }
 
 // toggle button

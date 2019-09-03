@@ -18,6 +18,8 @@ class VersionsController < ApplicationController
 
   def show
     @version = Version.find(params[:id])
+    @project = Project.find(params[:project_id])
+    @previous_versions = @project.versions.where("id <= ?", @version.id)
     authorize @version
   end
 
