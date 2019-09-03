@@ -1,10 +1,10 @@
 <!-- Button trigger modal -->
-  <button class="btn-circle-paint" data-toggle="modal" data-target="#colorSwatch">
+  <button class="btn-circle-paint" data-toggle="modal" data-target="#colorSwatchEdit">
   <i class="fas fa-fill-drip"></i>
   </button>
 
 <!-- Modal -->
-<div class="modal fade" id="colorSwatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="colorSwatchEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,7 +14,7 @@
         </button>
       </div>
       <div class="modal-body">
-         <%= simple_form_for [@last_version, @last_version.color_swatch] do |f| %>
+         <%= simple_form_for [@last_version, @last_version.color_swatch], remote: true do |f| %>
            <%= f.color_field :color_1 %>
            <%= f.color_field :color_2 %>
            <%= f.color_field :color_3 %>
@@ -22,10 +22,10 @@
            <%= f.color_field :color_5 %>
 
           <div class="modal-footer">
-          <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
-          <i class="fas fa-check"></i>
-          <% end %>
-        </div>
+            <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
