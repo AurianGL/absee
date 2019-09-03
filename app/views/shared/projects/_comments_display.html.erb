@@ -13,7 +13,7 @@
       </label>
     </div>
 
-    <div class=" <%= "#{comment.size} C#{comment.id}#{comment.user.id}" %>">
+    <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
       <% if comment.image.present? %>
         <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
         <!-- <div class="paint-comment">
@@ -28,6 +28,7 @@
       <div style="display: none;">
         <%= render 'shared/projects/update_coordinates', path: comment %>
         <%= render 'shared/projects/update_display', path: comment %>
+        <%= render 'shared/projects/update_size', path: comment %>
       </div>
     </div>
   </div>

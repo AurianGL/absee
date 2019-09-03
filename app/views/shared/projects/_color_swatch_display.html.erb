@@ -1,7 +1,10 @@
 <% if  @project.versions.last.color_swatch.present? %>
 
     <div class="draggable color_swatch" style="top: <%= @project.versions.last.color_swatch.y %>px; left: <%= @project.versions.last.color_swatch.x %>px">
-      <div class="hand-icon d-flex stuff">
+      <div>
+        <div class="hand-icon" ></div>
+      </div>
+      <div class="d-flex stuff">
 
         <div class="color" style="background-color: <%= @project.versions.last.color_swatch.color_1 %>"></div>
 

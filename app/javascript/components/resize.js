@@ -14,6 +14,14 @@ const resize = (event) => {
   console.log(currentCommentToResize);
   currentCommentToResize.classList.remove('big', 'small', 'medium')
   currentCommentToResize.classList.add(`${sizeToApply}`);
+  saveSize( `${sizeToApply}` );
+}
+
+const saveSize = (size) => {
+  const sizeForm = currentCommentToResize.querySelector(".size-form");
+  console.log(sizeForm.querySelector(".size-form-input"));
+  sizeForm.querySelector(".size-form-input").value = size;
+  sizeForm.querySelector(".size-form-submit").click();
 }
 
 const initResize = () => {
