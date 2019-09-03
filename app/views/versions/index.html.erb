@@ -6,7 +6,7 @@
      <h5>Versions</h5>
       <% @versions.each do |version| %>
         <p><%= version.name %></p>
-        <%= link_to "View Version", version_path(version), class: "btn btn-flat" %>
+        <%= link_to "View Version", project_version_path(version.project, version), class: "btn btn-flat" %>
       <% end %>
     <% end %>
    </div>
