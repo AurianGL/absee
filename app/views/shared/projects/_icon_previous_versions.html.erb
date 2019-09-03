@@ -1,7 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-circle p-2" data-toggle="modal" data-target="#previousVersions">
-<i class="fas fa-chess-board"></i>
-  </div>
+<button type="button" class="btn-circle-versions" data-toggle="modal" data-target="#previousVersions">
+  <i class="far fa-clone"></i>
 </button>
 
 <!-- Modal -->
@@ -20,8 +19,8 @@
           <%= f.input :image %>
           <%= f.input :image_cache, as: :hidden %>
             <div class="modal-footer">
-              <%= button_tag(type: 'submit', class: "btn btn-primary btn-circle-save") do %>
-              <i class="icon-trello"></i>
+              <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
+              <i class="fas fa-check"></i>
               <% end %>
             </div>
           <% end %>
