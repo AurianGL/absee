@@ -1,5 +1,5 @@
 <% @project.comments.each do |comment| %>
-  <div class="draggable comment <%= "artist" if comment.user_id == project.artist_id %> <%= "client" if comment.user_id == project.customer_id %>" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px">
+  <div class="draggable comment <%= "artist" if comment.user_id == project.artist_id %> <%= "client" if comment.user_id == project.customer_id %>" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px; z-index: <%= "#{comment.z}" %>">
     <div class="d-flex">
       <div class="hand-icon" ></div>
 
@@ -29,6 +29,7 @@
         <%= render 'shared/projects/update_coordinates', path: comment %>
         <%= render 'shared/projects/update_display', path: comment %>
         <%= render 'shared/projects/update_size', path: comment %>
+        <%= render 'shared/projects/update_zindex', path: comment %>
       </div>
     </div>
   </div>

@@ -1,0 +1,4 @@
+<%= simple_form_for path, remote: true, html: { class: 'z-form' }  do |f| %>
+  <%= f.input :z, as: :hidden, input_html: { class: 'z-form-input' }%>
+  <%= f.submit as: :hidden, class: 'z-form-submit' %>
+<% end %>

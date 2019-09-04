@@ -1,5 +1,5 @@
 <% @project.comments.each do |comment| %>
-  <div class="draggable comment" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px">
+  <div class="draggable comment" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px; z-index: <%= comment.z %>">
     <div class="d-flex">
       <div class="hand-icon" ></div>
 

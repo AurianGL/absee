@@ -51,6 +51,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:description, :image, :x, :y, :size, :display)
+    params.require(:comment).permit(:description, :image, :x, :y, :size, :display, :z)
   end
 end

@@ -5,8 +5,9 @@
     </div>
     <%= cl_image_tag(@project.versions.last.photo, width: "400", height: "auto", alt: "work in progress", class:"draggable", draggable: false) %>
 <!--     <canvas></canvas>
- -->    <div style="display: none;">
+ --><div style="display: none;">
       <%= render 'shared/projects/update_coordinates', path: [@project, @project.versions.last] %>
+      <%= render 'shared/projects/update_zindex', path: [@project, @project.versions.last] %>
     </div>
   </div>
 <% end %>
