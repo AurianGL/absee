@@ -9,6 +9,10 @@ class ProjectsController < ApplicationController
     authorize @project
     @last_version = @project.versions.last
     # @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
+    z_array = []
+    last_z(z_array  )
+    @z_index = z_array.max
+
 
     @comment = Comment.new
     @color_swatch = ColorSwatch.new
@@ -60,6 +64,15 @@ class ProjectsController < ApplicationController
   # def version_params
   #   params.require(:version).permit(:project_id, :photo)
   # end
+
+  def last_z(z_array)
+    @project.comments.each do |comment|
+      z_array << comment.z
+    end
+    z_array << @project.versions.last.z
+    z_array << @project.versions.last.color_swatch.z
+    z_array.delete(nil)
+  end
 
   def project_params
     params.require(:project).permit(:customer_id, :artist_id, :brief, :name)

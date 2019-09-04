@@ -41,8 +41,9 @@
   </label>
 </div>
 
-<!-- Canvases -->
-<div class="moodboard d-flex" >
+<!-- Artist's workspace -->
+<div class="moodboard d-flex" data-lastz="<%= @z_index %>">
+>>>>>>> master
   <%= render 'shared/projects/work_in_progress_display', project: @project %>
   <%= render 'shared/projects/color_swatch_display', project: @project, version: @last_version %>
   <%= render 'shared/projects/comments_display', project: @project %>

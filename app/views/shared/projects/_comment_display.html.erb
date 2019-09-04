@@ -1,5 +1,5 @@
 <% @project.comments.each do |comment| %>
-  <div class="draggable comment <%= "artist" if comment.user_id == project.artist_id %> <%= "client" if comment.user_id == project.customer_id %>" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px; z-index: <%= "#{comment.z}" %>">
+  <div class="draggable comment" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px; z-index: <%= comment.z %>">
     <div class="d-flex">
       <div class="hand-icon" ></div>
 
@@ -16,11 +16,9 @@
     <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
       <% if comment.image.present? %>
         <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
-        <div class="paint-comment">
-          <div class="cadre-canvas">
-            <canvas class="drawable"></canvas>
-          </div>
-        </div>
+        <!-- <div class="paint-comment">
+          <canvas class="drawable"></canvas>
+        </div> -->
       <% end %>
       <% if comment.description.present? %>
         <div class="comment-text">
@@ -31,7 +29,6 @@
         <%= render 'shared/projects/update_coordinates', path: comment %>
         <%= render 'shared/projects/update_display', path: comment %>
         <%= render 'shared/projects/update_size', path: comment %>
-        <%= render 'shared/projects/update_zindex', path: comment %>
       </div>
     </div>
   </div>
