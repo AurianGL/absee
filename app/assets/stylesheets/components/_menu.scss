@@ -1,0 +1,89 @@
+// add color/comment buttons //
+
+.deploy-plus {
+  position: absolute;
+  bottom: -2px;
+  left: 87%;
+}
+
+.swatch-menu {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.comment-menu {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.swatch-menu.slide {
+  top: -90px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.comment-menu.slide {
+  top: -136px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+
+// versions display buttons //
+
+.deploy-versions {
+  position: absolute;
+  bottom: -2px;
+  left: 93%;
+}
+
+.version-add {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.version-history {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.version-add.display {
+  top: -90px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.version-history.display {
+  top: -136px;
+  left: 16px;
+  transition: all 0.5s ease-in;
+}
+
+// comments display buttons //
+
+// .deploy-comments {
+//   position: absolute;
+//   bottom: -2px;
+//   left: 92%;
+// }
+
+// .comment-view-all {
+//   position: absolute;
+//   top: -20px;
+//   left: 10px;
+//   transition: all 0.5s ease-in;
+// }
+
+// .comment-view-all.pop {
+//   top: -78px;
+//   left: 10px;
+//   transition: all 0.5s ease-in;
+// }

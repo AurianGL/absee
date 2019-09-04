@@ -1,5 +1,5 @@
 button:focus {
-  outline:0;
+  outline: 0;
 }
 
 .btn-flat {
@@ -51,7 +51,7 @@ button:focus {
 
 .btn-circle-paint:hover {
   color: white;
-  background-color: $blue;
+  background-color: $yellow;
 }
 
 .btn-circle-comment {
@@ -69,7 +69,7 @@ button:focus {
 
 .btn-circle-comment:hover {
   color: white;
-  background-color: $yellow;
+  background-color: $red;
 }
 
 .btn-circle-version {
@@ -90,6 +90,24 @@ button:focus {
   background-color: $red;
 }
 
+.btn-circle-history {
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 23px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-circle-history:hover {
+  color: white;
+  background-color: $blue;
+}
+
 .btn-circle-artist {
   color: black;
   background: white;
@@ -100,6 +118,9 @@ button:focus {
   font-size: 30px;
   line-height: 1.428571429;
   border-radius: 30px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
   border: 3px solid black;
 }
 
@@ -137,24 +158,42 @@ button:focus {
   line-height: 1.428571429;
   border-radius: 30px;
   border: 3px solid black;
+  position: absolute;
+  bottom: -30px;
+  left: 92%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
 }
 
 .btn-circle-view-big:hover {
-  color: $yellow;
-  border: 3px solid $yellow;
+  color: $red;
+  border: 3px solid $red;
 }
 
 .btn-circle-plus {
   color: black;
   background: white;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   padding: 6px 0;
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1.428571429;
-  border-radius: 30px;
+  border-radius: 35px;
   border: 3px solid black;
+  position: absolute;
+  bottom: -30px;
+  left: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
 }
 
 .btn-circle-plus:hover {
@@ -165,14 +204,23 @@ button:focus {
 .btn-circle-versions {
   color: black;
   background: white;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   padding: 6px 0;
-  font-size: 30px;
+  font-size: 35px;
   line-height: 1.428571429;
-  border-radius: 30px;
+  border-radius: 35px;
   border: 3px solid black;
+  position: absolute;
+  bottom: -30px;
+  left: 95%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
 }
 
 .btn-circle-versions:hover {

@@ -4,6 +4,14 @@ import "bootstrap";
 // import {initToggleVisibility} from "../components/toggle_visibility";
 // import {initResize} from "../components/resize"
 // import {closeModale} from "../components/closemodale"
+import { slideBtn } from "../components/slideBtn"
+slideBtn();
+
+// import { popBtn } from "../components/slideBtn"
+// popBtn();
+
+import { displayBtn } from "../components/slideBtn"
+displayBtn();
 
 // TWEAK TO MAKE JQUERY AVAILABLE IN RAILSJS ERB
 window.jquery = $;
