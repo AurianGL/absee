@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_111222) do
+ActiveRecord::Schema.define(version: 2019_09_04_083411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_09_03_111222) do
     t.string "x"
     t.string "y"
     t.string "size", default: "medium"
-    t.boolean "display", default: true
+    t.boolean "display", default: false
     t.index ["user_id"], name: "index_comments_on_user_id"
     t.index ["version_id"], name: "index_comments_on_version_id"
   end
