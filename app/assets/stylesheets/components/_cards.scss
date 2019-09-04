@@ -9,7 +9,30 @@
   margin: auto;
 }
 
-.card-version img {
+.card-project {
+  overflow: hidden;
+  height: 170px;
+  width: 200px;
+  background: white;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.deploy-plus {
+  position: absolute;
+  bottom: -2px;
+  left: 87%;
+}
+
+.card-version.img {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-project.img {
   height: 100%;
   width: 200px;
   object-fit: cover;
