@@ -1,24 +1,33 @@
-<div class="container">
+<div class="container-fluid">
 
-  <div class="version-title">
+  <div class="version-title header">
     <h2>PROJECT HISTORY</h2>
+    <div class="deploy-plus">
+      <%= link_to project_path(@project) do %>
+        <button class="btn-circle-plus"><i class="fas fa-step-backward"></i></button>
+      <% end %>
+    </div>
   </div>
 
   <% @versions.each do |version| %>
-  <div class="card-version mb-3">
-    <img src="" alt="">
-    <div class="card-version-infos">
-      <h5><%= @project.name %></h5>
-      <p>"<%= @project.brief %>"</p>
-      <p><%= version.name %></p>
-        <div class="card-version-btn">
-          <%= link_to project_versions_path(@project) do %>
-            <button class="btn-circle-view"><i class="fas fa-eye"></i></button>
-          <% end %>
-        </div>
+  <div class="img card-version mt-3 mb-3">
+    <div class="img">
+      version.photo
+      <!-- version.photo -->
     </div>
+      <div class="card-version-infos">
+        <h5><%= @project.name %></h5>
+        <p>"<%= @project.brief %>"</p>
+        <p><%= version.name %></p>
+          <div class="card-version-btn">
+            <%= link_to versions_path(@version) do %>
+              <button class="btn-circle-view"><i class="fas fa-eye"></i></button>
+            <% end %>
+          </div>
+      </div>
   </div>
   <% end %>
 </div>
+
 
 
