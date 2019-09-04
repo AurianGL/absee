@@ -11,9 +11,11 @@ const setZ = (event) => {
 }
 
 const saveZ = (z) => {
+  console.log(t);
   const zForm = t.querySelector(".z-form");
+  const zFormInput = t.querySelector(".z-form-input");
   console.log(zForm)
-  console.log(zForm.querySelector(".z-form-input"));
+  // console.log(zFormInput);
   zForm.querySelector(".z-form-input").value = z;
   zForm.querySelector(".z-form-submit").click();
 }

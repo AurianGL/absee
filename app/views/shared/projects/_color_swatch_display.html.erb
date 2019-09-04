@@ -1,6 +1,6 @@
 <% if  project.versions.last.color_swatch.present? %>
 
-    <div class="draggable color_swatch" style="top: <%= @project.versions.last.color_swatch.y %>px; left: <%= @project.versions.last.color_swatch.x %>px">
+    <div class="draggable color_swatch" style="top: <%= @project.versions.last.color_swatch.y %>px; left: <%= @project.versions.last.color_swatch.x %>px; z-index: <%= "#{@project.versions.last.color_swatch.z}" %>">
       <div>
         <div class="hand-icon" ></div>
       </div>

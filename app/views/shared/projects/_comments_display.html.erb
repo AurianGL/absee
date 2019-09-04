@@ -16,9 +16,11 @@
     <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
       <% if comment.image.present? %>
         <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
-        <!-- <div class="paint-comment">
-          <canvas class="drawable"></canvas>
-        </div> -->
+        <div class="paint-comment">
+          <div class="cadre-canvas">
+            <canvas class="drawable"></canvas>
+          </div>
+        </div>
       <% end %>
       <% if comment.description.present? %>
         <div class="comment-text">
