@@ -25,7 +25,8 @@ const stop = (event) => {
 
 const savePosition = ( x, y , currentDraggable) => {
   // console.log(currentDraggable);
-  const coordinateForm = currentDraggable.querySelector(".size-form");
+  const coordinateForm = currentDraggable.querySelector(".coordinate-form");
+  // console.log(coordinateForm.querySelector(".coordinate-form-x");
   coordinateForm.querySelector(".coordinate-form-x").value = x;
   coordinateForm.querySelector(".coordinate-form-y").value = y - 238;
   // coordinateForm.submit();
