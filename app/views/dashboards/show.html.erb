@@ -6,9 +6,9 @@
         <% end %>
         <%= link_to "Get started", new_project_path(@project), class: "a" %>
      <% @customer_projects.each do |project| %>
-      <div class="card-product mt-3">
+      <div class="card-version mt-3 mb-3">
        <%#= image_tag "#" %>
-       <div class="card-product-infos">
+       <div class="card-version-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
           <i class="btn-circle-view far fa-eye"></i>
@@ -18,11 +18,12 @@
      <% end %>
     <% end %>
     <% if @artist_projects.any? %>
+
      <h5>Dashboard</h5>
      <% @artist_projects.each do |project| %>
-      <div class="card-product mt-3">
+      <div class="card-version mt-3">
        <%#= image_tag "#" %>
-       <div class="card-product-infos">
+       <div class="card-version-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
         <%= link_to "View Project", project_path(project), class: "a" %>
