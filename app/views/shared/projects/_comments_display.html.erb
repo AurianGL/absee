@@ -15,11 +15,13 @@
 
     <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
       <% if comment.image.present? %>
-        <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
         <div class="paint-comment">
-          <div class="cadre-canvas">
-            <canvas class="drawable"></canvas>
-          </div>
+          <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
+            <canvas class="drawable" data-canvas=" <%= comment.canvas %>">
+              <div style="display: none;" >
+                <%= render 'shared/projects/update_canvas', path: comment %>
+              </div>
+            </canvas>
         </div>
       <% end %>
       <% if comment.description.present? %>

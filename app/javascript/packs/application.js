@@ -14,7 +14,7 @@ import { displayBtn } from "../components/slideBtn"
 displayBtn();
 
 // TWEAK TO MAKE JQUERY AVAILABLE IN RAILSJS ERB
-window.jquery = $;
+window.$ = $;
 
 // initDraggable();
 // initCanvas();

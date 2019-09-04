@@ -6,8 +6,8 @@ let initX;
 let context
 
 const start = (event) => {
-  console.log(event);
   currentDrawable = event.currentTarget;
+  // console.log(currentDrawable);
   initY = event.offsetY;
   initX = event.offsetX;
   context = currentDrawable.getContext('2d');
@@ -15,13 +15,17 @@ const start = (event) => {
 }
 
 const stop = (event) => {
-  console.log(event);
+  // console.log(event);
   currentDrawable.removeEventListener("mousemove", draw);
+  const data = currentDrawable.toDataURL()
+  console.log(data)
+  // console.log(currentDrawable);
+  save( data );
 }
 
 const draw = (event) => {
-  console.log(currentDrawable);
-  console.log(event.offsetX, event.offsetY);
+  // console.log(currentDrawable);
+  // console.log(event.offsetX, event.offsetY);
 
   context.lineCap = 'round';
   context.lineJoin = 'round';
@@ -37,9 +41,27 @@ const draw = (event) => {
   initX = event.offsetX;
 }
 
+const save = (data) => {
+  const canvasForm = currentDrawable.querySelector(".canvas-form");
+  canvasForm.querySelector(".canvas-form-input").value = data;
+  console.log(canvasForm.querySelector(".canvas-form-input").value);
+  canvasForm.querySelector(".canvas-form-submit").click();
+}
+
+const loadCanvas = (drawable) => {
+  console.log("lol")
+  const ctx = drawable.getContext('2d');
+  let img = new Image();
+  img.addEventListener("load", () => {
+    ctx.drawImage(img, 0, 0)
+  });
+  img.src = drawable.dataset.canvas;
+}
+
 const initCanvas = () => {
   drawables.forEach((drawable) => {
     if ( drawable ){
+        loadCanvas(drawable);
         drawable.addEventListener( "mousedown", start);
         drawable.addEventListener( "mouseup", stop);
       }

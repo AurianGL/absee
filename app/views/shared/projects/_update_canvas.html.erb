@@ -1,0 +1,4 @@
+<%= simple_form_for path, remote: true, html: { class: 'canvas-form' }  do |f| %>
+  <%= f.input :canvas, input_html: { class: 'canvas-form-input' }%>
+  <%= f.submit class: 'canvas-form-submit' %>
+<% end %>
