@@ -1,20 +1,29 @@
 <!-- Big Buttons -->
 <div class="container-fluid header">
-    <h2><%= @project.name %></h2>
-      <button class="btn-circle-plus">
-        <i class="fas fa-plus"></i>
-      </button>
-        <button class="p-1 text-left">
-          <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
-        </button>
-          <button type="button" class="btn-circle-versions" data-toggle="modal" data-target="#previousVersions">
-            <i class="far fa-clone"></i>
-          </button>
-            <button class="btn-circle-view-big">
-              <i class="far fa-comments"></i>
-            </button>
+  <h2><%= @project.name %></h2>
+  <button class="btn-circle-plus">
+    <i class="fas fa-plus"></i>
+  </button>
+  <button class="p-1 text-left">
+    <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
+  </button>
+  <button type="button" class="btn-circle-versions" data-toggle="modal" data-target="#previousVersions">
+    <i class="far fa-clone"></i>
+  </button>
+  <button class="btn-circle-view-big">
+    <i class="far fa-comments"></i>
+  </button>
+  client
+  <label class="switch toggler" data-type="client" href="#">
+    <input type="checkbox" >
+    <span class="slider round"></span>
+  </label>
+  artist
+  <label class="switch toggler" data-type="artist" href="#">
+    <input type="checkbox" >
+    <span class="slider round"></span>
+  </label>
 </div>
-
 <!-- Hidden Buttons -->
 <div class="container menu d-flex">
   <span class="p-1 text-left">
