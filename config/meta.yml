@@ -1,5 +1,5 @@
 meta_product_name: "ABY See"
 meta_title: "ABY See - Creativity Flows"
 meta_description: "Interactive Moodboards"
-meta_image: "background.png" # should exist in `app/assets/images/`
+meta_image: "logo.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
