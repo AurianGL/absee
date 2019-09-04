@@ -6,7 +6,7 @@ import "bootstrap";
 // import {closeModale} from "../components/closemodale"
 
 // TWEAK TO MAKE JQUERY AVAILABLE IN RAILSJS ERB
-window.jquery = $;
+window.$ = $;
 
 // initDraggable();
 // initCanvas();

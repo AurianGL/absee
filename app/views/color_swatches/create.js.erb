@@ -2,7 +2,7 @@ function addColorSwatch(colorSwatchHTML) {
   const colorSwatch = document.querySelector('.moodboard');
   colorSwatch.insertAdjacentHTML('beforeend', colorSwatchHTML);
 
-  window.jquery('#colorSwatch').modal('hide');
+  $('#colorSwatch').modal('hide');
 }
 
 addColorSwatch('<%= j render "shared/projects/color_swatch_display", project: @project, version: @version %>');
