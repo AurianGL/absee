@@ -7,14 +7,21 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     authorize @comment
     if @comment.save
-      flash[:notice] = 'your comment has been added'
       respond_to do |format|
-        format.html { redirect_to project_path(@project) }
+        format.html do
+          flash[:notice] = 'your comment has been added'
+          redirect_to project_path(@project)
+        end
         format.js # <-- will render `app/views/reviews/create.js.erb`
       end
     else
-      flash[:notice] = 'error'
-      redirect_to project_path(@project)
+      respond_to do |format|
+        format.html do
+          flash[:notice] = 'error'
+          redirect_to project_path(@project)
+        end
+        format.js # <-- will render `app/views/reviews/create.js.erb`
+      end
     end
   end
 
@@ -30,12 +37,14 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       respond_to do |format|
         format.html { redirect_to project_path(@project) }
-        format.js # <-- will render `app/views/comment/update.js.erb`
+        format.js # <-- will render `app/views/reviews/create.js.erb`
       end
     else
-      flash[:notice] = "couldn't update comment"
       respond_to do |format|
-        format.html { redirect_to project_path(@project) }
+        format.html do
+          flash[:notice] = "couldn't update comment"
+          redirect_to project_path(@project)
+        end
         format.js # <-- will render `app/views/reviews/create.js.erb`
       end
     end
@@ -45,10 +54,3 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:description, :image, :x, :y, :size, :display)
   end
 end
-
-# @color_swatch = ColorSwatch.find(params[:id])
-#     @version = Version.find(params[:version_id])
-#     @project = @version.project
-#     authorize @color_swatch
-
-
