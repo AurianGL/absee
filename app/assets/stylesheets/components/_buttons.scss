@@ -1,5 +1,11 @@
 button:focus {
   outline: 0;
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
 }
 
 .btn-flat {
@@ -139,12 +145,13 @@ button:focus {
   font-size: 22px;
   line-height: 1.428571429;
   border-radius: 20px;
-  border: none;
+  border: 3px solid black;
 }
 
 .btn-circle-view:hover {
   color: white;
-  background-color: $yellow;
+  background-color: $blue;
+  border: 3px solid $blue;
 }
 
 .btn-circle-view-big {
