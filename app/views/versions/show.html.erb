@@ -1,9 +1,22 @@
-<div class="version-title header">
+
+<div class="version-title header container-fluid" >
   <h2><%= @project.name %></h2>
   <p><%= @version.name %></p>
-    <div class="deploy-plus">
+    <div class="deploy-backwards">
       <%= link_to project_versions_path(@project) do %>
-        <button class="btn-circle-plus"><i class="fas fa-step-backward"></i></button>
+        <button class="btn-circle-fast-back"><i class="fas fa-fast-backward"></i></button>
+      <% end %>
+      </div>
+
+      <div class="deploy-plus">
+      <%= link_to project_version_path(@version.project, @totoversion) do %>
+        <button class="btn-circle-forward"><i class="fas fa-backward"></i></button>
+      <% end %>
+    </div>
+
+      <div class="deploy-versions">
+      <%= link_to project_version_path(@version.project, @pippaversion) do %>
+        <button class="btn-circle-forward"><i class="fas fa-forward"></i></button>
       <% end %>
     </div>
 </div>
@@ -11,4 +24,3 @@
   <%= render 'shared/version/version_display', project: @project %>
   <%= render 'shared/version/version_comments_display', project: @project %>
 </div>
-

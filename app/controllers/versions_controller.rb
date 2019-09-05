@@ -22,6 +22,8 @@ class VersionsController < ApplicationController
     @version = Version.find(params[:id])
     @project = Project.find(params[:project_id])
     @previous_versions = @project.versions.where("id <= ?", @version.id)
+    @totoversion = @version.id - 1
+    @pippaversion = @version.id + 1
     authorize @version
   end
 
