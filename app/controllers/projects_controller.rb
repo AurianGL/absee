@@ -67,10 +67,10 @@ class ProjectsController < ApplicationController
 
   def last_z(z_array)
     @project.comments.each do |comment|
-      z_array << comment.z if comment
+      z_array << comment.z if comment.present?
     end
-    z_array << @project.versions.last.z if @project.versions.last
-    z_array << @project.versions.last.color_swatch.z if @project.versions.last.color_swatch
+    z_array << @project.versions.last.z if @project.versions.last.present?
+    z_array << @project.versions.last.color_swatch.z if @project.versions.last.color_swatch.present?
     z_array.delete(nil)
   end
 
