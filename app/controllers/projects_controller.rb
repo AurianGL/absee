@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
     @last_version = @project.versions.last
     # @last_color_swatch = @last_version.color_swatch if @last_version.color_swatch
     z_array = []
-    last_z(z_array  )
+    last_z(z_array)
     @z_index = z_array.max
 
 
@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
       @version = Version.new(name: version_name)
       @version.project = @project
       @version.save
-      redirect_to @project
+      redirect_to project_path(@project)
     else
       render :new
     end
@@ -67,9 +67,9 @@ class ProjectsController < ApplicationController
 
   def last_z(z_array)
     @project.comments.each do |comment|
-      z_array << comment.z
+      z_array << comment.z if comment
     end
-    z_array << @project.versions.last.z
+    z_array << @project.versions.last.z if @project.versions.last
     z_array << @project.versions.last.color_swatch.z if @project.versions.last.color_swatch
     z_array.delete(nil)
   end
