@@ -15,7 +15,6 @@
             <%= link_to current_user.email, dashboard_path %>
           </button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "NEWEST PROJECT", dashboard_path, class: "dropdown-item" %>
             <%= link_to "DASHBOARD", dashboard_path, class: "dropdown-item" %>
             <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

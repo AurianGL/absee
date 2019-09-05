@@ -1,15 +1,33 @@
-<div class="d-flex">
- <div class="m-3 col-6">
-  <div class="container d-flex justify-content-start align-items-stretch m-0 col-12 flex-column">
-   <div class="ml-3">
-    <% if @versions.any? %>
-     <h5>Versions</h5>
-      <% @versions.each do |version| %>
-        <p><%= version.name %></p>
-        <%= link_to "View Version", project_version_path(version.project, version), class: "btn btn-flat" %>
+<div class="container-fluid">
+
+  <div class="version-title header">
+    <h2>PROJECT HISTORY</h2>
+    <div class="deploy-plus">
+      <%= link_to project_path(@project) do %>
+        <button class="btn-circle-plus"><i class="fas fa-step-backward"></i></button>
       <% end %>
-    <% end %>
-   </div>
+    </div>
   </div>
+<% console %>
+  <% @versions.each do |version| %>
+  <div class="img card-version mt-3 mb-3">
+    <div class="img">
+      version.photo
+      <!-- version.photo -->
+    </div>
+      <div class="card-version-infos">
+        <h5><%= @project.name %></h5>
+        <p>"<%= @project.brief %>"</p>
+        <p><%= version.name %></p>
+          <div class="card-version-btn">
+            <%= link_to project_version_path(version.project, version) do %>
+              <button class="btn-circle-view"><i class="fas fa-eye"></i></button>
+            <% end %>
+          </div>
+      </div>
+  </div>
+  <% end %>
 </div>
+
+
 

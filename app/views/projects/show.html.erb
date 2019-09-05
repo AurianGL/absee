@@ -1,44 +1,49 @@
-<!-- Big Buttons -->
+<!-- Header with title and menu -->
 <div class="container-fluid header">
+
   <h2><%= @project.name %></h2>
-  <button class="btn-circle-plus">
-    <i class="fas fa-plus"></i>
-  </button>
-  <button class="p-1 text-left">
-    <%= render 'shared/projects/popup_onboard_artist', project: @project  %>
-  </button>
-  <button type="button" class="btn-circle-versions" data-toggle="modal" data-target="#previousVersions">
-    <i class="far fa-clone"></i>
-  </button>
-  <button class="btn-circle-view-big">
-    <i class="far fa-comments"></i>
-  </button>
-  client
+
+  <div class="deploy-plus">
+    <button class="btn-circle-plus">
+      <i class="fas fa-plus"></i>
+    </button>
+      <button class="comment-menu btn-circle-comment" data-toggle="modal" data-target="#newComment">
+        <i class="far fa-comment-dots"></i>
+      </button>
+        <% if @project.versions.last.color_swatch.present? %>
+          <button class="swatch-menu btn-circle-paint" data-toggle="modal" data-target="#colorSwatchEdit">
+            <i class="fas fa-fill-drip"></i>
+          </button>
+        <% else %>
+        <button class="swatch-menu btn-circle-paint" data-toggle="modal" data-target="#colorSwatch">
+          <i class="fas fa-fill-drip"></i>
+        </button>
+        <% end %>
+  </div>
+
+  <div class="deploy-versions">
+    <button class="btn-circle-versions">
+        <i class="fas fa-clone"></i>
+    </button>
+      <button class="version-add btn-circle-version" data-toggle="modal" data-target="#newWIP">
+        <i class="far fa-file-image"></i>
+      </button>
+      <%= link_to project_versions_path(@project) do %>
+        <button class="version-history btn-circle-history"><i class="fas fa-history"></i></button>
+      <% end %>
+  </div>
+
+ <!-- Show/Hide Buttons -->
+ <i class="far fa-eye"></i> client
   <label class="switch toggler" data-type="client" href="#">
     <input type="checkbox" >
     <span class="slider round"></span>
   </label>
-  artist
+  <i class="far fa-eye"></i> artist
   <label class="switch toggler" data-type="artist" href="#">
     <input type="checkbox" >
     <span class="slider round"></span>
   </label>
-</div>
-<!-- Hidden Buttons -->
-<div class="container menu d-flex">
-  <span class="p-1 text-left">
-    <%= render 'shared/projects/popup_new_comment', project: @project  %>
-  </span>
-    <span class="p-1 text-left">
-      <% if @project.versions.last.color_swatch.present? %>
-        <%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
-      <% else %>
-        <%= render 'shared/projects/popup_color_swatch', project: @project  %>
-      <% end %>
-    </span>
-      <span class="p-1 text-left">
-        <%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
-      </span>
 </div>
 
 <!-- Artist's workspace -->
@@ -48,3 +53,11 @@
   <%= render 'shared/projects/comments_display', project: @project %>
 </div>
 
+<!-- Modals -->
+<%= render 'shared/projects/popup_new_comment', project: @project  %>
+<% if @project.versions.last.color_swatch.present? %>
+  <%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
+<% else %>
+  <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+<% end %>
+<%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>

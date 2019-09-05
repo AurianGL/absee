@@ -4,5 +4,4 @@ class Version < ApplicationRecord
   has_one :color_swatch
 
   mount_uploader :photo, PhotoUploader
-
 end

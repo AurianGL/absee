@@ -1,38 +1,46 @@
-<div class="dashboard d-flex">
-    <% if @customer_projects.any? %>
-     <h1>Dashboard</h1>
-        <%= button_tag(type: 'submit', class: "btn-circle-save") do %>
-        <i class="fas fa-plus"></i>
-        <% end %>
-        <%= link_to "Get started", new_project_path(@project), class: "a" %>
-     <% @customer_projects.each do |project| %>
-      <div class="card-product mt-3">
-       <%#= image_tag "#" %>
-       <div class="card-product-infos">
+<div class="container-fluid">
+  <div class="header">
+    <h2>DASHBOARD</h2>
+    <div class="deploy-plus">
+      <%= link_to new_project_path(@project) do %>
+      <button class="btn-circle-plus"><i class="fas fa-plus"></i></button>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @customer_projects.any? %>
+    <% @customer_projects.each do |project| %>
+    <div class="card-project mt-3 mb-3">
+      <div class="card-version-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
-          <i class="btn-circle-view far fa-eye"></i>
-        <%= link_to "View Project", project_path(project), class: "a" %>
-       </div>
+          <div class="card-version-btn">
+            <%= link_to project_path(project) do %>
+              <button class="btn-circle-view"><i class="fas fa-eye"></i></button>
+            <% end %>
+          </div>
       </div>
-     <% end %>
+    </div>
     <% end %>
-    <% if @artist_projects.any? %>
-     <h5>Dashboard</h5>
-     <% @artist_projects.each do |project| %>
-      <div class="card-product mt-3">
-       <%#= image_tag "#" %>
-       <div class="card-product-infos">
+  <% end %>
+
+  <% if @artist_projects.any? %>
+    <% @artist_projects.each do |project| %>
+    <div class="card-project mb-3">
+      <div class="card-version-infos">
         <p><%= project.name %></p>
         <p><%= project.brief %></p>
-        <%= link_to "View Project", project_path(project), class: "a" %>
-       </div>
+          <div class="card-version-btn">
+            <%= link_to project_path(project) do %>
+              <button class="btn-circle-view"><i class="fas fa-eye"></i></button>
+            <% end %>
+          </div>
       </div>
-     <% end %>
+    </div>
     <% end %>
-    <% if !@customer_projects.any? && !@artist_projects.any? %>
-     <h3><i class="fas fa-palette"></i> Moodboards made effective.</h3>
+  <% end %>
+  <% if !@customer_projects.any? && !@artist_projects.any? %>
      <p>Bring your ideas to life, start your first project.</p>
-     <%= link_to "Get started", new_project_path(@project), class: "a" %>
+     <%= link_to "GET STARTED", new_project_path(@project), class: "a" %>
     <% end %>
 </div>
