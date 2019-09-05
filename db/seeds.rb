@@ -78,40 +78,226 @@ puts "it's gonna be alright"
 
 puts "create version"
 
-version = Version.new(
+version_1 = Version.create!(
   project: Project.first,
   name: "version 0",
   )
 
-version = Version.new(
+version_2 = Version.create!(
   project: Project.last,
-  name: "version 0",
+  name: "brief",
   )
 
-version = Version.new(
+version_3 = Version.create!(
   project: Project.last,
-  name: "version 1",
+  name: "retour",
   )
 
-# url_version = "https://images-na.ssl-images-amazon.com/images/I/71lBoP-NNGL._SX425_.jpg"
-# version.remote_photo_url = url_version
-# version.save!
+version_4 = Version.create!(
+  project: Project.last,
+  name: "WIP",
+  )
+
+
+url_version = "app/assets/images/WIP1.png"
+version_4.remote_photo_url = url_version
+version_4.save!
+
 
 puts "version created"
 
+brief = Version.find_by name: "brief"
+retour = Version.find_by name: "retour"
+wip = Version.find_by name: "WIP"
 
 puts "creating some commentaires"
 
-# comment = Comment.new(
-#     user: User.last,
-#     version: Version.last,
-#     description: "bof",
-#     validation: true
-#     )
+comment_1 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
 
-# url = "https://images-na.ssl-images-amazon.com/images/I/71lBoP-NNGL._SX425_.jpg"
-# comment.remote_image_url = url
-# comment.save!
+comment_2 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
+
+comment_3 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
+
+comment_4 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
+
+comment_5 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
+
+comment_6 = Comment.create!(
+    user: User.last,
+    version: brief,
+    description: "",
+    validation: true
+    )
+
+url = "app/assets/images/breitz1.jpg"
+comment_1.remote_image_url = url
+comment_1.save!
+
+url = "app/assets/images/breitz2.jpg"
+comment_2.remote_image_url = url
+comment_2.save!
+
+url = "app/assets/images/breitz3.jpg"
+comment_3.remote_image_url = url
+comment_3.save!
+
+url = "app/assets/images/breitz4.jpg"
+comment_4.remote_image_url = url
+comment_4.save!
+
+url = "app/assets/images/breitz5.jpg"
+comment_5.remote_image_url = url
+comment_5.save!
+
+url = "app/assets/images/breitz6.jpg"
+comment_6.remote_image_url = url
+comment_6.save!
+
+comment_7 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_7 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_8 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_9 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_10 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_11 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "",
+    validation: true
+    )
+
+comment_12 = Comment.create!(
+    user: User.first,
+    version: retour,
+    description: "je pense faire qqch de glitchy",
+    validation: true
+    )
+
+url = "app/assets/images/ref10.jpg"
+comment_7.remote_image_url = url
+comment_7.save!
+
+url = "app/assets/images/ref2.jpg"
+comment_7.remote_image_url = url
+comment_7.save!
+
+url = "app/assets/images/ref3.jpg"
+comment_8.remote_image_url = url
+comment_8.save!
+
+url = "app/assets/images/ref4.jpg"
+comment_9.remote_image_url = url
+comment_9.save!
+
+url = "app/assets/images/ref5.gif"
+comment_10.remote_image_url = url
+comment_10.save!
+
+url = "app/assets/images/ref6.gif"
+comment_11.remote_image_url = url
+comment_11.save!
+
+
+
+comment_13 = Comment.create!(
+    user: User.first,
+    version: wip,
+    description: "",
+    validation: true
+    )
+
+comment_14 = Comment.create!(
+    user: User.first,
+    version: wip,
+    description: "",
+    validation: true
+    )
+
+comment_15 = Comment.create!(
+    user: User.last,
+    version: wip,
+    description: "",
+    validation: true
+    )
+
+comment_16 = Comment.create!(
+    user: User.last,
+    version: wip,
+    description: "",
+    validation: true
+    )
+
+url = "app/assets/images/ref7.jpg"
+comment_13.remote_image_url = url
+comment_13.save!
+
+url = "app/assets/images/ref8.jpg"
+comment_14.remote_image_url = url
+comment_14.save!
+
+url = "app/assets/images/ref9.jpg"
+comment_15.remote_image_url = url
+comment_15.save!
+
+url = "app/assets/images/ref1.jpg"
+comment_16.remote_image_url = url
+comment_16.save!
+
+
 
 
 puts "C'est fait!"
