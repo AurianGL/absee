@@ -70,7 +70,7 @@ class ProjectsController < ApplicationController
       z_array << comment.z
     end
     z_array << @project.versions.last.z
-    z_array << @project.versions.last.color_swatch.z
+    z_array << @project.versions.last.color_swatch.z if @project.versions.last.color_swatch
     z_array.delete(nil)
   end
 

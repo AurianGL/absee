@@ -1,5 +1,4 @@
 <!-- Header with title and menu -->
-
 <div class="container-fluid header">
 
   <h2><%= @project.name %></h2>
@@ -11,9 +10,15 @@
       <button class="comment-menu btn-circle-comment" data-toggle="modal" data-target="#newComment">
         <i class="far fa-comment-dots"></i>
       </button>
-        <button class="swatch-menu btn-circle-paint" data-toggle="modal" data-target="#colorSwatchEdit">
+        <% if @project.versions.last.color_swatch.present? %>
+          <button class="swatch-menu btn-circle-paint" data-toggle="modal" data-target="#colorSwatchEdit">
+            <i class="fas fa-fill-drip"></i>
+          </button>
+        <% else %>
+        <button class="swatch-menu btn-circle-paint" data-toggle="modal" data-target="#colorSwatch">
           <i class="fas fa-fill-drip"></i>
         </button>
+        <% end %>
   </div>
 
   <div class="deploy-versions">
@@ -50,5 +55,9 @@
 
 <!-- Modals -->
 <%= render 'shared/projects/popup_new_comment', project: @project  %>
-<%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
+<% if @project.versions.last.color_swatch.present? %>
+  <%= render 'shared/projects/popup_color_swatch_edit', project: @project %>
+<% else %>
+  <%= render 'shared/projects/popup_color_swatch', project: @project  %>
+<% end %>
 <%= render 'shared/projects/popup_work_in_progress_display', project: @project  %>
