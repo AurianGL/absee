@@ -341,3 +341,48 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+.btn-circle-fast-back {
+  color: black;
+  background: white;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 35px;
+  line-height: 1.428571429;
+  border-radius: 35px;
+  border: 3px solid black;
+  position: absolute;
+  bottom: -30px;
+  left: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.btn-circle-forward {
+  color: black;
+  background: white;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 35px;
+  line-height: 1.428571429;
+  border-radius: 35px;
+  border: 3px solid black;
+  position: absolute;
+  bottom: -30px;
+  left: 0%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
