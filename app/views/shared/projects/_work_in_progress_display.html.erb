@@ -1,8 +1,6 @@
 <% if @project.versions.last.photo.present? %>
   <div class="draggable work_in_progress" style="top: <%= @project.versions.last.y %>px; left: <%= @project.versions.last.x %>px; z-index: <%= "#{@project.versions.last.z}" %>">
-    <div>
-      <div class="hand-icon "><i class="far fa-hand-pointer"></i></div>
-    </div>
+
     <%= cl_image_tag(@project.versions.last.photo, width: "400", height: "auto", alt: "work in progress", draggable: false) %>
 <!--     <canvas></canvas>
  --><div style="display: none;">
@@ -10,5 +8,8 @@
       <%= render 'shared/projects/update_zindex', path: [@project, @project.versions.last] %>
       <%= render 'shared/projects/update_canvas', path: [@project, @project.versions.last] %>
     </div>
+      <div class="d-flex phil">
+        <div class="hand-icon wip"><i class="fas fa-asterisk"></i></div>
+      </div>
   </div>
 <% end %>

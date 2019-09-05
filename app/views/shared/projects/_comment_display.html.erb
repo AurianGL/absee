@@ -1,16 +1,21 @@
 <% @project.comments.each do |comment| %>
   <div class="draggable comment" data-commentid="<%= comment.id %>" style="top: <%= comment.y %>px; left: <%= comment.x %>px; z-index: <%= comment.z %>">
-    <div class="d-flex">
+    <div class="d-flex phil">
       <div class="hand-icon" ></div>
 
-      <div class="resizeIcon" data-size="big" data-type="<%="C#{comment.id}#{comment.user.id}" %>" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
-      <div class="resizeIcon" data-size="medium" data-type="<%="C#{comment.id}#{comment.user.id}" %>" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
-      <div class="resizeIcon" data-type="<%="C#{comment.id}#{comment.user.id}" %>" data-size="small" style="height: 30px; width: 10px; background-color: black; margin: 2px;"></div>
+      <div class="img-menu">
+        <div class="resizeIcon xs" data-type="<%="C#{comment.id}#{comment.user.id}" %>" data-size="small" >
+        </div>
+        <div class="resizeIcon med" data-size="medium" data-type="<%="C#{comment.id}#{comment.user.id}" %>">
+        </div>
+        <div class="resizeIcon lg" data-size="big" data-type="<%="C#{comment.id}#{comment.user.id}" %>">
+        </div>
 
-      <label class="switch toggler" data-type="<%="C#{comment.id}#{comment.user.id}" %>" href="#">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-      </label>
+          <label class="switch toggler" data-type="<%="C#{comment.id}#{comment.user.id}" %>" href="#">
+            <input type="checkbox" >
+            <span class="slider round"></span>
+          </label>
+        </div>
     </div>
 
     <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
