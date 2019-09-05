@@ -140,55 +140,36 @@ comment_4 = Comment.create!(
     validation: true
     )
 
-comment_5 = Comment.create!(
+comment_4 = Comment.create!(
     user: User.last,
     version: brief,
-    description: "",
+    description: "l'album va s'appeler electric dream",
     validation: true
     )
 
-comment_6 = Comment.create!(
-    user: User.last,
-    version: brief,
-    description: "",
-    validation: true
-    )
 
-url = "app/assets/images/breitz1.jpg"
+
+url = "app/assets/images/breitz2.jpg"
 comment_1.remote_image_url = url
 comment_1.save!
 
-url = "app/assets/images/breitz2.jpg"
+url = "app/assets/images/breitz4.jpg"
 comment_2.remote_image_url = url
 comment_2.save!
 
-url = "app/assets/images/breitz3.jpg"
+url = "app/assets/images/breitz6.jpg"
 comment_3.remote_image_url = url
 comment_3.save!
 
-url = "app/assets/images/breitz4.jpg"
+url = "app/assets/images/ref3.jpg"
 comment_4.remote_image_url = url
 comment_4.save!
 
-url = "app/assets/images/breitz5.jpg"
-comment_5.remote_image_url = url
-comment_5.save!
-
-url = "app/assets/images/breitz6.jpg"
-comment_6.remote_image_url = url
-comment_6.save!
 
 comment_7 = Comment.create!(
     user: User.first,
     version: retour,
-    description: "",
-    validation: true
-    )
-
-comment_7 = Comment.create!(
-    user: User.first,
-    version: retour,
-    description: "",
+    description: "la police est chouette",
     validation: true
     )
 
@@ -214,90 +195,46 @@ comment_10 = Comment.create!(
     )
 
 comment_11 = Comment.create!(
-    user: User.first,
+    user: User.last,
     version: retour,
-    description: "",
+    description: "j'adore l'idée du mouton, en pixel art ce sera top !",
     validation: true
     )
 
-comment_12 = Comment.create!(
-    user: User.first,
+comment_11 = Comment.create!(
+    user: User.last,
     version: retour,
-    description: "je pense faire qqch de glitchy",
+    description: "super univers graphique, très industriel, du pixel un peu glitchy corresponderais bien",
     validation: true
     )
 
-url = "app/assets/images/ref10.jpg"
+
+
+url = "app/assets/images/ref9.jpg"
 comment_7.remote_image_url = url
 comment_7.save!
 
-url = "app/assets/images/ref2.jpg"
-comment_7.remote_image_url = url
-comment_7.save!
-
-url = "app/assets/images/ref3.jpg"
+url = "app/assets/images/ref6.gif"
 comment_8.remote_image_url = url
 comment_8.save!
 
-url = "app/assets/images/ref4.jpg"
+url = "app/assets/images/ref1.jpg"
 comment_9.remote_image_url = url
 comment_9.save!
 
-url = "app/assets/images/ref5.gif"
+url = "app/assets/images/ref12.jpg"
 comment_10.remote_image_url = url
 comment_10.save!
 
-url = "app/assets/images/ref6.gif"
-comment_11.remote_image_url = url
-comment_11.save!
-
-
-
 comment_13 = Comment.create!(
-    user: User.first,
-    version: wip,
-    description: "",
-    validation: true
-    )
-
-comment_14 = Comment.create!(
-    user: User.first,
-    version: wip,
-    description: "",
-    validation: true
-    )
-
-comment_15 = Comment.create!(
     user: User.last,
     version: wip,
-    description: "",
-    validation: true
-    )
-
-comment_16 = Comment.create!(
-    user: User.last,
-    version: wip,
-    description: "",
+    description: "un bleu plus écran d'ordinateur, un peu comme ça",
     validation: true
     )
 
 url = "app/assets/images/ref7.jpg"
 comment_13.remote_image_url = url
 comment_13.save!
-
-url = "app/assets/images/ref8.jpg"
-comment_14.remote_image_url = url
-comment_14.save!
-
-url = "app/assets/images/ref9.jpg"
-comment_15.remote_image_url = url
-comment_15.save!
-
-url = "app/assets/images/ref1.jpg"
-comment_16.remote_image_url = url
-comment_16.save!
-
-
-
 
 puts "C'est fait!"

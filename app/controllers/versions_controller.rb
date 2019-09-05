@@ -15,7 +15,7 @@ class VersionsController < ApplicationController
 
   def index
     @project = Project.find(params[:project_id])
-    @versions = policy_scope(@project.versions)
+    @versions = policy_scope(@project.versions.order(created_at: :desc))
   end
 
   def show
