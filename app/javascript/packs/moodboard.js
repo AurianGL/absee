@@ -5,6 +5,7 @@ import {initToggleVisibility} from "../components/toggle_visibility";
 import {initResize} from "../components/resize"
 import {closeModale} from "../components/closemodale"
 import {initSetZ} from "../components/z_index"
+import {onLoadResize} from "../components/resize"
 
 
 initSetZ();
@@ -13,3 +14,4 @@ initCanvas();
 initToggleVisibility();
 initResize();
 closeModale();
+onLoadResize();
