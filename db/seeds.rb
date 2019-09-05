@@ -140,43 +140,24 @@ comment_4 = Comment.create!(
     validation: true
     )
 
-comment_5 = Comment.create!(
-    user: User.last,
-    version: brief,
-    description: "",
-    validation: true
-    )
 
-comment_6 = Comment.create!(
-    user: User.last,
-    version: brief,
-    description: "",
-    validation: true
-    )
 
-url = "app/assets/images/breitz1.jpg"
+url = "app/assets/images/breitz2.jpg"
 comment_1.remote_image_url = url
 comment_1.save!
 
-url = "app/assets/images/breitz2.jpg"
+url = "app/assets/images/breitz4.jpg"
 comment_2.remote_image_url = url
 comment_2.save!
 
-url = "app/assets/images/breitz3.jpg"
+url = "app/assets/images/breitz6.jpg"
 comment_3.remote_image_url = url
 comment_3.save!
 
-url = "app/assets/images/breitz4.jpg"
+url = "app/assets/images/ref3.jpg"
 comment_4.remote_image_url = url
 comment_4.save!
 
-url = "app/assets/images/breitz5.jpg"
-comment_5.remote_image_url = url
-comment_5.save!
-
-url = "app/assets/images/breitz6.jpg"
-comment_6.remote_image_url = url
-comment_6.save!
 
 comment_7 = Comment.create!(
     user: User.first,
