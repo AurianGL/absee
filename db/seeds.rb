@@ -165,7 +165,6 @@ url = "app/assets/images/ref3.jpg"
 comment_4.remote_image_url = url
 comment_4.save!
 
-
 comment_7 = Comment.create!(
     user: User.first,
     version: retour,
