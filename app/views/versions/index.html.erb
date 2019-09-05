@@ -1,7 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid-versions">
 
   <div class="version-title header">
-    <h2>PROJECT HISTORY</h2>
+    <h2><%= @project.name %></h2>
+    <h3>PROJECT HISTORY</h3>
     <div class="deploy-plus">
       <%= link_to project_path(@project) do %>
         <button class="btn-circle-plus"><i class="fas fa-step-backward"></i></button>
@@ -9,10 +10,13 @@
     </div>
   </div>
   <% @versions.each do |version| %>
-  <div class="img card-version mt-3 mb-3">
+  <div class="card-version mt-3 mb-3">
     <div class="img">
-      version.photo
-      <!-- version.photo -->
+      <% if version.photo? %>
+        <%= cl_image_tag version.photo, width: 200, height: 250, crop: :fill%>
+      <% else %>
+      <%= image_tag 'https://res.cloudinary.com/de6fhitzz/image/upload/v1567682788/Capture_d_e%CC%81cran_2019-09-05_a%CC%80_13.26.07_oqwgqq.png', width: 200, height: 220, crop: :fill %>
+      <% end %>
     </div>
       <div class="card-version-infos">
         <h5><%= @project.name %></h5>
@@ -27,6 +31,3 @@
   </div>
   <% end %>
 </div>
-
-
-

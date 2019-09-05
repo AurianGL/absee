@@ -6,7 +6,10 @@
   border: 3px solid black;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin-top: 18px;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-project {
@@ -17,7 +20,10 @@
   border: 3px solid black;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin-top: 18px;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .deploy-plus {
@@ -64,6 +70,14 @@
   background: white;
   border-left: 3px solid black;
   padding: 0px 0px 0px 5px;
+}
+
+.card-version-infos {
+  margin: 0 auto;
+}
+
+.card-project-infos {
+  margin: 0 auto;
 }
 
 .card-version .card-version-btn {

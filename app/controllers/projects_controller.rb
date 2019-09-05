@@ -13,7 +13,6 @@ class ProjectsController < ApplicationController
     last_z(z_array)
     @z_index = z_array.max
 
-
     @comment = Comment.new
     @color_swatch = ColorSwatch.new
     # @last_version = @project.versions.last
