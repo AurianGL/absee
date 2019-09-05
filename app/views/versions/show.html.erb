@@ -1,11 +1,12 @@
-
+<div class="version-title header">
+  <h2><%= @project.name %></h2>
   <p><%= @version.name %></p>
-  <p><%= @version.project.brief %></p>
-  <p><%= @version.created_at %></p>
-  <p><%= @version.project_id %></p>
-
-
-
+    <div class="deploy-plus">
+      <%= link_to project_path(@project) do %>
+        <button class="btn-circle-plus"><i class="fas fa-step-backward"></i></button>
+      <% end %>
+    </div>
+</div>
 <div class="moodboard d-flex" >
   <%= render 'shared/version/version_display', project: @project %>
   <%= render 'shared/version/version_comments_display', project: @project %>
