@@ -1,4 +1,6 @@
 class VersionsController < ApplicationController
+  layout "versions"
+
   def create
     @version = Version.new(version_params)
     @project = Project.find(params[:project_id])
