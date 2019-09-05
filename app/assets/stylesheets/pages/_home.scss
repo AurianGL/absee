@@ -21,6 +21,16 @@ body {
   margin-bottom: 5px;
 }
 
+.container h2 {
+  font-family: 'Raleway', sans-serif;
+  -webkit-background-clip: text;
+  padding: 0 20px;
+  font-size: 3vw;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
 .cta {
   margin-top: 50px;
 }
@@ -35,16 +45,6 @@ body {
 
 .title a:hover {
   padding: 6px 19px 9px;
-}
-
-.container h2 {
-  font-family: 'Raleway', sans-serif;
-  -webkit-background-clip: text;
-  padding: 0 20px;
-  font-size: 3vw;
-  color: black;
-  margin-top: 5px;
-  margin-bottom: 50px;
 }
 
 @media all and (max-width: 480px){
