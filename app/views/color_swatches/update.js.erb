@@ -1,8 +1,9 @@
-// function updateColorSwatch(colorSwatchHTML) {
-//   const colorSwatch = document.querySelector('.color_swatch');
-//   colorSwatch.outerHTML = colorSwatchHTML;
+function updateColorSwatch(colorSwatchHTML) {
+  const colorSwatch = document.querySelector('.color_swatch');
+  colorSwatch.innerHTML = colorSwatchHTML;
+  console.log("lol")
 
-//   window.jquery('#colorSwatch, #colorSwatchEdit').modal('hide');
-// }
+  $('#colorSwatch, #colorSwatchEdit').modal('hide');
+}
 
-// updateColorSwatch('<%= j render "shared/projects/color_swatch_display", project: @project, version: @version %>');
+updateColorSwatch('<%= j render "shared/projects/color_swatch_ajax", project: @project, version: @version %>');

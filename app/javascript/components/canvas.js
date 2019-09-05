@@ -49,7 +49,6 @@ const save = (data) => {
 }
 
 const loadCanvas = (drawable) => {
-  console.log("lol")
   const ctx = drawable.getContext('2d');
   let img = new Image();
   img.addEventListener("load", () => {

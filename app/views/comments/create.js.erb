@@ -2,7 +2,7 @@ function addComment(commentHTML) {
   const comment = document.querySelector('.moodboard');
   comment.insertAdjacentHTML('beforeend', commentHTML);
 
-  window.jquery('#comment').modal('hide');
+  $('#comment').modal('hide');
 }
 
 addComment('<%= j render "shared/projects/comment_display", project: @project, version: @version %>');

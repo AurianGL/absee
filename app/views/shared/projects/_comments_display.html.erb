@@ -16,8 +16,8 @@
     <div class="<%="#{comment.size} C#{comment.id}#{comment.user.id}" %> <%= "hideComment" if comment.display %>" >
       <% if comment.image.present? %>
         <div class="paint-comment">
-          <%= cl_image_tag(comment.image_url, width: "100%", height: "auto", alt: "erreur", draggable: false, class: "") %>
-            <canvas class="drawable" data-canvas=" <%= comment.canvas %>">
+          <%= cl_image_tag(comment.image_url, width: "300", height: "auto", alt: "erreur", draggable: false, class: "") %>
+            <canvas class="drawable" data-canvas="<%= comment.canvas %>">
               <div style="display: none;" >
                 <%= render 'shared/projects/update_canvas', path: comment %>
               </div>
