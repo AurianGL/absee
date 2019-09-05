@@ -1,3 +1,104 @@
 .drawable {
   background-color: pink;
 }
+
+.hand-icon {
+  cursor: pointer;
+  min-width: 5px;
+}
+
+.resizeIcon {
+  cursor: pointer;
+  height: 20px;
+  width: 8px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.resizeIcon:hover {
+  background-color: blue !important;
+}
+
+.resizeIcon.xs:hover {
+  background-color: blue !important;
+}
+
+.resizeIcon.med:hover {
+  background-color: blue !important;
+}
+
+.resizeIcon.xs {
+  border-right: none;
+}
+
+.resizeIcon.med {
+  border-right: none;
+}
+
+.resizeIcon.med:hover {
+  border-right: none;
+}
+
+.resizeIcon.lg {
+
+}
+
+.img-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 110px;
+}
+
+.phil {
+  height: 70px;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+
+.capu span{
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  border-radius: 50%;
+  border: 0.5px solid black;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-left: 6px;
+  line-height: 10px;
+  padding: 0;
+}
+
+.fa-eye, .fa-eye-slash{
+  line-height: 10px;
+  padding: 0;
+}
+
+
+.capu input + span .fa-eye {
+  display: inline;
+}
+
+.capu input + span .fa-eye-slash {
+  display: none;
+}
+
+
+.capu input:checked + span .fa-eye {
+  display: none;
+}
+
+.capu input:checked + span .fa-eye-slash {
+  display: inline;
+}
+
+.capu input {
+  display: none;
+}
