@@ -7,10 +7,12 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     authorize @comment
     if @comment.save
-      @comment.reload
-      dimensions = FastImage.size(@comment.image.url)
-      @comment.width = dimensions[0]
-      @comment.height = dimensions[1]
+      if @comment.image.present?
+        @comment.reload
+        dimensions = FastImage.size(@comment.image.url)
+        @comment.width = dimensions[0]
+        @comment.height = dimensions[1]
+      end
       respond_to do |format|
         format.html do
           flash[:notice] = 'your comment has been added'
