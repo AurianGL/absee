@@ -96,11 +96,15 @@ version_3 = Version.create!(
 version_5 = Version.create!(
   project: Project.last,
   name: "second WIP",
+  y: "52",
+  x: "507",
   )
 
 version_6 = Version.create!(
   project: Project.last,
   name: "third WIP",
+  y: "52",
+  x: "507",
   )
 
 url_version = "app/assets/images/firstWIP.png"
@@ -182,18 +186,10 @@ url = "app/assets/images/ref3.jpg"
 comment_4.remote_image_url = url
 comment_4.save!
 
-comment_7 = Comment.create!(
-    user: User.first,
-    version: wip3,
-    description: "",
-    validation: true,
-    width: 620,
-    height: 1024,
-    )
 
 comment_8 = Comment.create!(
     user: User.last,
-    version: wip3,
+    version: wip2,
     description: "",
     validation: true,
     width: 900,
@@ -232,12 +228,6 @@ comment_11 = Comment.create!(
     validation: true
     )
 
-
-
-url = "app/assets/images/ref9.jpg"
-comment_7.remote_image_url = url
-comment_7.save!
-
 url = "app/assets/images/ref6.gif"
 comment_8.remote_image_url = url
 comment_8.save!
@@ -252,7 +242,7 @@ comment_10.save!
 
 comment_13 = Comment.create!(
     user: User.last,
-    version: wip3,
+    version: wip2,
     description: "un bleu plus écran",
     validation: true,
     width: 1280,
@@ -265,7 +255,7 @@ comment_13.save!
 
 comment_13 = Comment.create!(
     user: User.last,
-    version: wip3,
+    version: wip2,
     description: "on peut le faire plus glitchy ?",
     validation: true,
     width: 1280,
