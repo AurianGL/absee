@@ -6,7 +6,7 @@
       <% if comment.image.present? %>
         <div class="paint-comment">
           <%= cl_image_tag(comment.image_url, width: "300", height: "auto", alt: "erreur", draggable: false, class: "") %>
-            <canvas class="drawable" data-canvas="<%= comment.canvas %>" width: <%= FastImage.size(comment.image_url)[0] %>>
+            <canvas class="drawable" data-canvas="<%= comment.canvas %>" width="250", height="<%= 250 * comment.height / comment.width if comment.width  %>" >
               <div style="display: none;" >
                 <%= render 'shared/projects/update_canvas', path: comment %>
               </div>

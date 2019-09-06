@@ -70,7 +70,7 @@ Project.create!(
     name: "BRTZ new album",
     customer_id: User.last.id,
     artist_id: User.first.id,
-    brief: "I need a visual for my next album"
+    brief: "I need a visual for my next album ELECTRIC DREAM"
   )
 
 puts "it's gonna be alright"
@@ -95,7 +95,7 @@ version_3 = Version.create!(
 
 version_4 = Version.create!(
   project: Project.last,
-  name: "WIP",
+  name: "first WIP",
   )
 
 
@@ -108,7 +108,7 @@ puts "version created"
 
 brief = Version.find_by name: "brief"
 retour = Version.find_by name: "retour"
-wip = Version.find_by name: "WIP"
+wip = Version.find_by name: "first WIP"
 
 puts "creating some commentaires"
 
@@ -116,28 +116,36 @@ comment_1 = Comment.create!(
     user: User.last,
     version: brief,
     description: "",
-    validation: true
+    validation: true,
+    width: 500,
+    height: 500,
     )
 
 comment_2 = Comment.create!(
     user: User.last,
     version: brief,
     description: "",
-    validation: true
+    validation: true,
+    width: 960,
+    height: 960,
     )
 
 comment_3 = Comment.create!(
     user: User.last,
     version: brief,
     description: "",
-    validation: true
+    validation: true,
+    width: 888,
+    height: 888,
     )
 
 comment_4 = Comment.create!(
     user: User.last,
     version: brief,
     description: "",
-    validation: true
+    validation: true,
+    width: 1000,
+    height: 1000,
     )
 
 comment_4 = Comment.create!(
@@ -169,28 +177,36 @@ comment_7 = Comment.create!(
     user: User.first,
     version: retour,
     description: "la police est chouette",
-    validation: true
+    validation: true,
+    width: 620,
+    height: 1024,
     )
 
 comment_8 = Comment.create!(
     user: User.first,
     version: retour,
     description: "",
-    validation: true
+    validation: true,
+    width: 900,
+    height: 600,
     )
 
 comment_9 = Comment.create!(
     user: User.first,
     version: retour,
     description: "",
-    validation: true
+    validation: true,
+    width: 501,
+    height: 411,
     )
 
 comment_10 = Comment.create!(
     user: User.first,
     version: retour,
     description: "",
-    validation: true
+    validation: true,
+    width: 570,
+    height: 800,
     )
 
 comment_11 = Comment.create!(
@@ -229,7 +245,9 @@ comment_13 = Comment.create!(
     user: User.last,
     version: wip,
     description: "un bleu plus écran d'ordinateur, un peu comme ça",
-    validation: true
+    validation: true,
+    width: 1280,
+    height: 720,
     )
 
 url = "app/assets/images/ref7.jpg"
