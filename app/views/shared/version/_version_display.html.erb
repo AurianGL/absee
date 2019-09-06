@@ -1,4 +1,4 @@
-<% if @version %>
+<% if @version.photo.present? %>
   <div class="draggable work_in_progress" style="top: <%= @version.y %>px; left: <%= @version.x %>px; z-index: <%= "#{@version.z}" %>" >
     <%= cl_image_tag(@version.photo, width: "400", height: "auto", alt: "work in progress", class:"draggable", draggable: false) %>
   </div>
