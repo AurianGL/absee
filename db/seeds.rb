@@ -103,6 +103,11 @@ version_5 = Version.create!(
   name: "second WIP",
   )
 
+version_6 = Version.create!(
+  project: Project.last,
+  name: "third WIP",
+  )
+
 
 url_version = "app/assets/images/WIP1.png"
 version_4.remote_photo_url = url_version
@@ -112,6 +117,10 @@ url_version = "app/assets/images/WIP2.png"
 version_5.remote_photo_url = url_version
 version_5.save!
 
+url_version = "app/assets/images/WIP3.png"
+version_6.remote_photo_url = url_version
+version_6.save!
+
 
 puts "version created"
 
@@ -119,6 +128,7 @@ brief = Version.find_by name: "brief"
 retour = Version.find_by name: "retour"
 wip = Version.find_by name: "first WIP"
 wip2 = Version.find_by name: "second WIP"
+wip3 = Version.find_by name: "third WIP"
 
 puts "creating some commentaires"
 
@@ -194,7 +204,7 @@ comment_7 = Comment.create!(
 
 comment_8 = Comment.create!(
     user: User.last,
-    version: wip2,
+    version: wip3,
     description: "",
     validation: true,
     width: 900,
@@ -266,7 +276,7 @@ comment_13.save!
 
 comment_13 = Comment.create!(
     user: User.last,
-    version: wip2,
+    version: wip3,
     description: "on peux le faire plus glitchy ?",
     validation: true,
     width: 1280,
