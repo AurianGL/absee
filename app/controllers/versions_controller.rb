@@ -22,8 +22,8 @@ class VersionsController < ApplicationController
     @version = Version.find(params[:id])
     @project = Project.find(params[:project_id])
     @previous_versions = @project.versions.where("id <= ?", @version.id)
-    @totoversion = @version.id - 1
-    @pippaversion = @version.id + 1
+    @totoversion = @project.version_ids.map.with_index { |id, index| @project.version_ids[index - 1] if id == @version.id && @project.version_ids[index - 1] != nil }.join
+    @pippaversion = @project.version_ids.map.with_index { |id, index| @project.version_ids[index + 1] if id == @version.id && @project.version_ids[index + 1] != nil }.join
     authorize @version
   end
 
