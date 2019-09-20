@@ -9,17 +9,21 @@
       <% end %>
       </div>
 
-      <div class="deploy-plus">
-      <%= link_to project_version_path(@version.project, @totoversion) do %>
-        <button class="btn-circle-forward"><i class="fas fa-backward"></i></button>
+      <% if !@totoversion.nil? %>
+        <div class="deploy-plus">
+          <%= link_to project_version_path(@version.project, @totoversion) do %>
+            <button class="btn-circle-forward"><i class="fas fa-backward"></i></button>
+          <% end %>
+        </div>
       <% end %>
-    </div>
 
-      <div class="deploy-versions">
-      <%= link_to project_version_path(@version.project, @pippaversion) do %>
-        <button class="btn-circle-forward"><i class="fas fa-forward"></i></button>
+      <% if !@pippaversion.nil? %>
+        <div class="deploy-versions">
+          <%= link_to project_version_path(@version.project, @pippaversion) do %>
+          <button class="btn-circle-forward"><i class="fas fa-forward"></i></button>
+          <% end %>
+        </div>
       <% end %>
-    </div>
 </div>
 <div class="moodboard d-flex" >
   <%= render 'shared/version/version_display', project: @project %>
