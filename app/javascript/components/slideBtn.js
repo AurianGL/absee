@@ -6,10 +6,12 @@ const slideBtn = () => {
   const swatch = document.querySelector(".swatch-menu")
   const comment = document.querySelector(".comment-menu")
 
-  btn.addEventListener("click", (event) => {
-    swatch.classList.toggle("slide");
-    comment.classList.toggle("slide");
-  })
+  if ( btn ) {
+    btn.addEventListener("click", (event) => {
+      swatch.classList.toggle("slide");
+      comment.classList.toggle("slide");
+    })
+  }
 }
 
 export { slideBtn }
@@ -38,11 +40,13 @@ const displayBtn = () => {
   const newVersion = document.querySelector(".version-add")
   const allVersion = document.querySelector(".version-history")
 
-  btnDis.addEventListener("click", (event) => {
-    btnDis.classList.toggle("display");
-    newVersion.classList.toggle("display");
-    allVersion.classList.toggle("display");
-  })
+  if ( btnDis ) {
+    btnDis.addEventListener("click", (event) => {
+      btnDis.classList.toggle("display");
+      newVersion.classList.toggle("display");
+      allVersion.classList.toggle("display");
+    })
+  }
 }
 
 export { displayBtn }

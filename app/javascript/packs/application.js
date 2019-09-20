@@ -21,3 +21,7 @@ window.$ = $;
 // initToggleVisibility();
 // initResize();
 // closeModale();
+
+import { showModale} from "../components/closemodale"
+showModale();
+
